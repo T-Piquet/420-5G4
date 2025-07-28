@@ -1,6 +1,6 @@
 +++
 title = "VScode"
-weight = 20
+weight = 30
 +++
 
 ## Dev containers
