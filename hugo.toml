@@ -14,6 +14,7 @@ home = [ "HTML", "RSS", "SEARCH"]
 # If shown, a Home button will appear below the search bar and the main menu.
 # It links to your the home page of the current language.
 disableLandingPageButton = true
+disableInlineCopyToClipBoard = true
 
 [markup]
   [markup.goldmark]
