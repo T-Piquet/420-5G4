@@ -266,4 +266,3 @@ Un des principale différence avec Docker c'est qu'il n'utilise pas une architec
 - https://www.tutorialspoint.com/docker/index.htm
 - https://www.geeksforgeeks.org/devops/architecture-of-docker/
 - https://docs.docker.com/manuals/
-- 
