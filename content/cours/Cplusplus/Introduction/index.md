@@ -26,7 +26,6 @@ Chaque mise à jour apporte des modifications inspirées par d'autre langage par
 
 Les principales caractéristiques du langage de programmation C++ sont les suivantes :
 
-- **Simplicité** : il s'agit d'un langage simple dans le sens où les programmes peuvent être décomposés en unités et parties logiques, et il dispose d'une bibliothèque riche et d'une grande variété de types de données.
 - **Indépendance vis-à-vis de la machine** : le code C++ peut être exécuté sur n'importe quelle machine à condition de disposer d'un compilateur adapté.
 - **Accès bas niveau** : le C++ offre un accès bas niveau aux ressources système, ce qui en fait un choix approprié pour la programmation système et l'écriture de code efficace.
 - **Vitesse d'exécution rapide** : le C++ est l'un des langages de haut niveau les plus rapides. Il n'y a pas de surcharge de traitement supplémentaire en C++, il est extrêmement rapide.
@@ -69,6 +68,7 @@ Voici un exemple de programme `main.cpp` qu'on va exécuter dans un container :
 using namespace std;
 
 int main() {
+    // affiche dans le terminal
     cout << "Hello, World!" << endl ;
     return 0;
 }
@@ -125,9 +125,39 @@ Comme dans tous les langages de programmation, on doit avoir un point d'entrée 
 
 On utilise l'opérateur `<<` avec `cout` pour donner la chaine de caratère que l'on souhaite afficher. Cette opérateur peut s'enchainer, un peu comme une concaténation de chaîne, ici termine avec un retour à la ligne `<< endl`.
 
+### Les entrées / sorties en C++
+
+En C++, l'entrée et la sortie s'effectuent sous la forme d'une séquence d'octets, plus communément appelée flux (`streams`).
+
+- **Flux d'entrée** : si le flux d'octets va du périphérique (par exemple, le clavier) vers la mémoire principale, ce processus est appelé entrée. `std::cin`.
+- **Flux de sortie** : si le flux d'octets est inverse, c'est-à-dire qu'il va de la mémoire principale vers le périphérique (écran d'affichage), ce processus est appelé sortie. `std::cout` et `std::cerr`.
+
+```C++
+#include <iostream>
+using namespace std;
+int main() {
+    int age;
+    string name;
+
+    cout << "Entrez votre age: " << endl;
+    cin >> age;
+
+    cout << "Entrez votre prénom: " << endl;
+  	cin >> name;
+  
+    cout << "Votre prénom : " << name << " | votre age : " << age;
+    return 0;
+}
+```
+> [!warning] Attention
+> Le type de données saisies doit être identique à celui de la variable utilisée pour les stocker. Sinon, cela peut entraîner une erreur indéfinie ou un échec de la saisie.
+>
+>De plus, lorsque nous utilisons `cin` pour lire du texte en entrée, nous devons garder à l'esprit que cin cesse de lire l'entrée dès qu'il rencontre un espace blanc (espace, tabulation ou saut de ligne).
+
+
 ## Sources
 
-- https://fr.wikipedia.org/wiki/C%2B%2B
-- https://www.geeksforgeeks.org/cpp/smart-pointers-cpp/
-- https://ocw.mit.edu/courses/6-s096-introduction-to-c-and-c-january-iap-2013/resources/mit6_s096_iap13_lec1/
 - https://en.cppreference.com/index.html
+- https://fr.wikipedia.org/wiki/C%2B%2B
+- https://www.geeksforgeeks.org/cpp/c-plus-plus/
+- https://ocw.mit.edu/courses/6-s096-introduction-to-c-and-c-january-iap-2013/resources/mit6_s096_iap13_lec1/

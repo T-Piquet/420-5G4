@@ -1,13 +1,17 @@
 +++
 title = "Fonctions"
-weight = 30
+weight = 50
 +++
 
 ## Les fonctions en C++
 
 ## Les passages de paramètres
 
+### Passage par références ou par pointeur ?
 
+https://www.geeksforgeeks.org/cpp/passing-by-pointer-vs-passing-by-reference-in-cpp/
+
+https://www.geeksforgeeks.org/cpp/when-do-we-pass-arguments-by-reference-or-pointer/
 
 ## Travailler avec plusieurs fichiers sources
 
