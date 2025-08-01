@@ -34,7 +34,7 @@ Le C++ offre la panoplie habituelle des opérations nécessaire. Ici aussi, peu 
 | Nom             | Symbole | Description                                                                       |
 |------------------|---------|-----------------------------------------------------------------------------------|
 | **ET logique**   | `&&`    | Retourne vrai seulement si tous les opérandes sont vrais ou non nuls.             |
-| **OU logique**   | `||`    | Retourne vrai si l’un des opérandes est vrai ou non nul.                         |
+| **OU logique**   | `\|\|`    | Retourne vrai si l’un des opérandes est vrai ou non nul.                         |
 | **NON logique**  | `!`     | Retourne vrai si l’opérande est faux ou égal à zéro.                             |
 
 ## Les opérateurs bit à bit
@@ -42,13 +42,13 @@ Le C++ offre la panoplie habituelle des opérations nécessaire. Ici aussi, peu 
 | Nom                  | Symbole | Description                                                                 |
 |-----------------------|---------|-----------------------------------------------------------------------------|
 | **ET binaire**        | `&`     | Copie un bit dans le résultat si ce bit existe dans les deux opérandes.    |
-| **OU binaire**        | `|`     | Copie un bit dans le résultat si ce bit existe dans l’une des opérandes.   |
+| **OU binaire**        | `\|`     | Copie un bit dans le résultat si ce bit existe dans l’une des opérandes.   |
 | **XOR binaire**       | `^`     | Copie un bit dans le résultat si ce bit existe dans l’une des opérandes, mais pas les deux. |
 | **Décalage à gauche** | `<<`    | Décale la valeur vers la gauche selon le nombre de bits spécifié par l’opérande de droite. |
 | **Décalage à droite** | `>>`    | Décale la valeur vers la droite selon le nombre de bits spécifié par l’opérande de droite. |
 | **Complément à un**   | `~`     | Inverse les chiffres binaires : transforme les 1 en 0 et les 0 en 1.       |
 
-## Les opérateurs d´assignation
+## Les opérateurs d'assignation
 
 | Nom                         | Symbole | Description                                                                 |
 |------------------------------|---------|-----------------------------------------------------------------------------|
@@ -60,7 +60,7 @@ Le C++ offre la panoplie habituelle des opérations nécessaire. Ici aussi, peu 
 
 ## Opérateur ternaire
 
-Il s´agit d´un opérateur de condition.
+Il s'agit d'un opérateur de condition.
 
 ```C++
 #include <iostream>
@@ -82,7 +82,7 @@ int main() {
 
 Le C++ suit les règles mathématique usuelle.
 
-{{% expand title="Référence complète de l´ordre précédence" %}} 
+{{% expand title="Référence complète de l'ordre précédence" %}} 
 | Operator                     | Name                                 | Associativity |
 |-----------------------------|--------------------------------------|----------------|
 | `()` `[]` `->` `.`           | Function call, Subscript, Member access | Left         |
