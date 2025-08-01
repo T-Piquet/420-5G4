@@ -82,7 +82,8 @@ int main() {
 
 Le C++ suit les règles mathématique usuelle.
 
-{{% expand title="Référence complète de l'ordre précédence" %}} 
+{{% expand title="Référence complète de l'ordre précédence" %}}
+Organiser par ordre d'importance (1ere ligne évaluée en premier, dernière ligne dernier).
 | Operator                     | Name                                 | Associativity |
 |-----------------------------|--------------------------------------|----------------|
 | `()` `[]` `->` `.`           | Function call, Subscript, Member access | Left         |
