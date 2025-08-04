@@ -129,6 +129,55 @@ Encore une fois, la classe `string` du C++ est très similaire à celle de Java.
 
 Vous pourrez trouvez une liste exaustive ici : https://cplusplus.com/reference/string/string/
 
+
+## Inférence des types
+
+Depuis C++11, on peut utiliser le mots clefs `auto` pour laisser le compilateur trouver le type de la variable.
+
+Le compilateur déduit le type à partir de la valeur assignée à la déclaration de la variable.
+
+Cette déclaration à été créer principalement pour alléger l'écriture quand on utilise les objets de la [STL](../stl). 
+
+Voici un exemple avec les types de base :
+```C++
+#include <iostream>
+#include <typeinfo>
+using namespace std;
+
+int main() {
+    
+    //Using auto to avoid explicitly
+    //defining the data type
+    auto x = 4;
+    auto y = 3.37;
+    auto z = 3.37f;
+    auto c = 'a';
+    auto ptr = &x;
+    
+    //pointer to a pointer
+    auto pptr = &ptr; 
+    cout << typeid(x).name() << endl
+         << typeid(y).name() << endl
+         << typeid(z).name() << endl
+         << typeid(c).name() << endl
+         << typeid(ptr).name() << endl
+         << typeid(pptr).name() << endl;
+
+    return 0;
+}
+```
+Affichage :
+```
+i
+d
+f
+c
+Pi
+PPi
+```
+Avec `i` pour entier, `d` pour flottant double précision, `f` pour flottant simple précision, `c` pour caratère, le préfix `P` donne un pointeur: `Pi` pointeur vers un entier.
+
+
 ## Les types définies par l'usagé
 
 Il existe plusieurs manières de créer des types pour nos besoins, vous avez déjà rencontrer ce mécanisme. Lorsque que vous déclarez une nouvelle classe en Java, vous créez un nouveau type qui porte le nom de votre classe.

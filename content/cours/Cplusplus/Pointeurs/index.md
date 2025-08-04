@@ -19,3 +19,4 @@ https://www.geeksforgeeks.org/cpp/pointers-and-references-in-c/
 
 ## Sources
 - https://www.geeksforgeeks.org/cpp/cpp-data-types/
+- https://www.geeksforgeeks.org/cpp/memory-layout-of-cpp-program/
