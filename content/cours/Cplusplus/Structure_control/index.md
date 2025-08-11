@@ -3,10 +3,10 @@ title = "Structures de controle"
 weight = 40
 +++
 
-Le contrôle du flux d'exécution est lui aussi un héritage du C, vous trouverez de nombreuses ressemblance avec le Java.
+Le contrôle du flux d'exécution est, lui aussi, un héritage du C, vous trouverez de nombreuses ressemblances avec le Java.
 
 ## Les conditions
-Ici aussi on suit la même syntaxe qu'en java pour les 2 instructions contionnelles
+Ici aussi, on suit la même syntaxe qu'en java pour les 2 instructions conditionnelles
 
 ### If
 ```C++
@@ -64,7 +64,7 @@ int main(){
 On retrouve les formes habituelles de boucles en C++. Les boucles `for` lorsque l'on connait à l'avance le nombre d'itérations (par exemple parcourir un tableau), ou la boucle `while` quand on ne connait pas à l'avance le nombre d'itérations (par exemple valider une entrée utilisateur).
 
 ### For
-Cette forme de boucle est identique à celle que vous avez rencontré en Java.
+Cette forme de boucle est identique à celle que vous avez rencontrée en Java.
 
 ```C++
 for(int i = 5; i < 10; i++){
@@ -75,8 +75,8 @@ for(int i = 5; i < 10; i++){
 > [!warning] Attention
 > Comme en Java, il faut faire attention à la valeur de votre index lorsque vous accédez à un tableau. Si votre index dépasse votre tableau, vous risquez de créer des bugs.
 
-#### For sur un interval
-Cette manière de faire une boucle à été introduite avec C++11, elle s'inspire des langages plus récent, comme le python.
+#### For sur un intervalle
+Cette manière de faire une boucle a été introduite avec C++11, elle s'inspire des langages plus récents, comme le python.
 
 
 ```C++
@@ -124,9 +124,9 @@ do{
 ```
 
 > [!note]
-> Faites attention a bien modifier votre condition de sortie dans le corps de votre boucle. Autrement, vous risquez de vous retrouver dans une boucle infinie.
+> Faites attention à bien modifier votre condition de sortie dans le corps de votre boucle. Autrement, vous risquez de vous retrouver dans une boucle infinie.
 
-### Boucles infinie
+### Boucles infinies
 
 ```C++
 for(;;){
@@ -193,7 +193,7 @@ int main(){
 {{% /expand %}}
 
 ### goto
-Exemple:
+Exemple :
 ```C++
 #include <iostream>
 using namespace std;

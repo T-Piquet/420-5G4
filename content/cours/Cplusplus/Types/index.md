@@ -5,13 +5,13 @@ weight = 20
 
 En C++, on doit spécifier le type de données qu'une variable peut stocker. Il s'agit d'un langage typé, contrairement au Python. Chaque fois qu'une variable est définie en C++, le compilateur alloue une certaine quantité de mémoire à cette variable en fonction du type de données avec lequel elle est déclarée. Chaque type de données nécessite une quantité de mémoire différente.
 
-La plupart des mécanismes du C++ relatifs aux types sont très similaire à ceux que vous avez croisé en Java, pour la simple raison que le C++ et le Java ont un encêtre commun, le C.
+La plupart des mécanismes du C++ relatifs aux types sont très similaires à ceux que vous avez croisés en Java, pour la simple raison que le C++ et le Java ont un ancêtre commun, le C.
 
 ![alt text](data_type.png)
 
 ## Les types de base
 
-En C++ on retrouve les types habituel des autres langage typé :
+En C++ on retrouve les types habituels des autres langages typé :
 
 | Type de Donnée   | Utilisation                             | Longueur  | Plage de valeurs                    |
 |------------------|------------------------------------------|-----------|-------------------------------------|
@@ -30,13 +30,13 @@ En C++ on retrouve les types habituel des autres langage typé :
 >```
 
 ## Conversion de types
-La conversion de type en C++ est similaire au Java, hérité du langage C.
+La conversion de type en C++ est semblable au Java, hérité du langage C.
 
-### Les conversions implicite
-Les conversions implicite se font dans cet ordre :
+### Les conversions implicites
+Les conversions implicites se font dans cet ordre :
 > bool -> char -> short int -> int ->  unsigned int -> long -> unsigned -> long long -> float -> double -> long double
 
-### Les conversions explicite
+### Les conversions explicites
 
 Comme en Java, il suffit de préciser le type voulu entre parenthèses `(int)var` pour faire une conversion explicite.
 
@@ -77,6 +77,7 @@ int main() {
 }
 ```
 
+L'avantage de cette technique, c'est que le transtypage est vérifié à la compilation, alors que la technique précédente, la vérification se fait à l'exécution.
 ## Les tableaux
 Ici aussi, on retrouve un fonctionnement similaire au Java, on utilise les `[]` :
 
@@ -107,13 +108,13 @@ int main() {
 >
 > Pour obtenir le nombre d'éléments du tableau, il faut diviser cette taille par la taille d'un élément du tableau.
 
-On peut également créer des tableaux à plusieurs dimension, comme en Java:
+On peut également créer des tableaux à plusieurs dimensions, comme en Java :
 
 ```C++
 float matrice_3D[100][100][100];
 ```
 
-## Les chaînes de caratères
+## Les chaînes de caractères
 
 Il existe 2 manières d'utiliser les chaînes de caractères en C++:
 - La méthode C : qui n'est rien de plus qu'un tableau de `char` :
@@ -127,16 +128,16 @@ string str = "Bonjour";
 
 Encore une fois, la classe `string` du C++ est très similaire à celle de Java. Vous retrouverez le même type de fonctions (`find`, `strncmp`, ...), opérateurs (`+`, `+=`) et l'utilisation des `[]` pour accéder à une lettre en particulier.
 
-Vous pourrez trouvez une liste exaustive ici : https://cplusplus.com/reference/string/string/
+Vous pourrez trouver une liste exhaustive ici : https://cplusplus.com/reference/string/string/
 
 
 ## Inférence des types
 
-Depuis C++11, on peut utiliser le mots clefs `auto` pour laisser le compilateur trouver le type de la variable.
+Depuis C++11, on peut utiliser le mot clefs `auto` pour laisser le compilateur trouver le type de la variable.
 
 Le compilateur déduit le type à partir de la valeur assignée à la déclaration de la variable.
 
-Cette déclaration à été créer principalement pour alléger l'écriture quand on utilise les objets de la [STL](../stl). 
+Cette déclaration a été créée principalement pour alléger l'écriture quand on utilise les objets de la [STL](../stl). 
 
 Voici un exemple avec les types de base :
 ```C++
@@ -175,15 +176,15 @@ c
 Pi
 PPi
 ```
-Avec `i` pour entier, `d` pour flottant double précision, `f` pour flottant simple précision, `c` pour caratère, le préfix `P` donne un pointeur: `Pi` pointeur vers un entier.
+Avec `i` pour entier, `d` pour flottant double précision, `f` pour flottant simple précision, `c` pour caractère, le préfixe `P` donne un pointeur : `Pi` pointeur vers un entier.
 
 
-## Les types définies par l'usagé
+## Les types définis par l'usagé
 
-Il existe plusieurs manières de créer des types pour nos besoins, vous avez déjà rencontrer ce mécanisme. Lorsque que vous déclarez une nouvelle classe en Java, vous créez un nouveau type qui porte le nom de votre classe.
+Il existe plusieurs manières de créer des types pour nos besoins, vous avez déjà rencontré ce mécanisme. Lorsque que vous déclarez une nouvelle classe en Java, vous créez un nouveau type qui porte le nom de votre classe.
 
 ### Les structures et les unions
-Les structures et les unions sont un héritage direct du C, on peux voir la structure comme une classe publique sans méthodes. Une simple collection de données.
+Les structures et les unions sont un héritage direct du C, on peut voir la structure comme une classe publique sans méthodes. Une simple collection de données.
 
 ```C++
 struct point {
@@ -222,15 +223,15 @@ int main() {
     return 0;
 }
 ```
-Résultat d'exécution:
+Résultat d'exécution :
 ```
 a.i: 65
 a.c: A
 ```
 {{% /expand %}}
 
-### Les énumerations
-Principalement utilisé pour attribuer des noms à des constantes entière. Ces noms facilitent la lecture et la maintenance du programme.
+### Les énumérations
+Principalement utilisé pour attribuer des noms à des constantes entières. Ces noms facilitent la lecture et la maintenance du programme.
 
 {{% expand title="Exemple d'énumération" %}}
 ```C++
@@ -252,7 +253,7 @@ int main() {
     return 0;
 }
 ```
-Résultat d'exécution:
+Résultat d'exécution :
 ```
 2
 ```
@@ -289,7 +290,7 @@ int main() {
 
 ### Les classes
 
-Ce que nous verrons en détails dans la partie [Programation orienté objet](../poo)
+Ce que nous verrons en détails dans la partie [Programmation orienté objet](../poo)
 
 ## Sources
 - https://www.geeksforgeeks.org/cpp/cpp-data-types/

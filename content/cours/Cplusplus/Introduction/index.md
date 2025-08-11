@@ -30,18 +30,18 @@ Les principales caractéristiques du langage de programmation C++ sont les suiva
 - **Accès bas niveau** : le C++ offre un accès bas niveau aux ressources système, ce qui en fait un choix approprié pour la programmation système et l'écriture de code efficace.
 - **Vitesse d'exécution rapide** : le C++ est l'un des langages de haut niveau les plus rapides. Il n'y a pas de surcharge de traitement supplémentaire en C++, il est extrêmement rapide.
 - **Orienté objet** : l'un des points forts du langage qui le distingue du C. La prise en charge orientée objet aide le C++ à créer des programmes faciles à maintenir et extensibles, c'est-à-dire qu'il permet de créer des applications à grande échelle.
-- **Une communauté active** : en plus du développement du langage, la librairie standard (STL) du C++ est en continuel avancement grace à la librairie [boost](https://www.boost.org/).
+- **Une communauté active** : en plus du développement du langage, la librairie standard (STL) du C++ est en continuel avancement grâce à la librairie [boost](https://www.boost.org/).
 
 
 ## Un langage compilé
 
-Contrairement au java et au python, le programme généré par du code C++ est exécuté directement par le système d'exploitation, il n'y a pas de machine virtuelle qui prend en charge l'exécution.
+Contrairement au Java et au Python, le programme généré par du code C++ est exécuté directement par le système d'exploitation, il n'y a pas de machine virtuelle qui prend en charge l'exécution.
 
 ![alt text](compilation_interpretation.png)
 
 Pour arriver à ce résultat, on doit passer par 3 étapes :
-- Pour chaque fichier `.cpp` du projet:
-    1. **Le Pre-processing** : On vérifie que la syntaxe est bonne, et on applique les modifications au fichier à compiler (les instructions commencant par `#`).
+- Pour chaque fichier `.cpp` du projet :
+    1. **Le Pre-processing** : On vérifie que la syntaxe est bonne, et on applique les modifications au fichier à compiler (les instructions commençant par `#`).
     2. **La compilation** : On traduit les instructions C++ en langage machine et on applique des optimisations si nécessaire. On obtient alors un fichier objet `.o`
 - Pour l'ensemble des fichiers `.o` :
 
@@ -51,11 +51,11 @@ Pour arriver à ce résultat, on doit passer par 3 étapes :
 
 ## Une gestion de la mémoire manuelle
 
-Contrairement au java ou au python, il n'y a pas de mécanisme de `garbage collection` en C++. C'est-à-dire que vous devez gérer vous même les requêtes d'allocation mémoire (création d'un grand tableau, charger une image en mémoire etc...), et aussi libérer l'espace une fois l'utilisation terminée.
+Contrairement au Java ou au python, il n'y a pas de mécanisme de `garbage collection` en C++. C'est-à-dire que vous devez gérer vous-même les requêtes d'allocation mémoire (création d'un grand tableau, charger une image en mémoire etc...), et aussi libérer l'espace une fois l'utilisation terminée.
 
-Si on est pas méticuleux, c'est avec ces mécanismes qu'on fait des fuites mémoires (l'utilisation de la RAM augmente avec le temps et fini par ne plus pouvoir s'exécuter.), des pointeurs corrompu qui peuvent donner accès à des zones mémoires pour des attaquants etc...
+Si on n'est pas méticuleux, c'est avec ces mécanismes qu'on fait des fuites mémoires (l'utilisation de la RAM augmente avec le temps et fini par ne plus pouvoir s'exécuter.), des pointeurs corrompus qui peuvent donner accès à des zones mémoires pour des attaquants etc...
 
-Heureusement avec les évolutions du langage, ces problèmes sont minimisé grâce à l'utilisation des smart pointer.
+Heureusement avec les évolutions du langage, ces problèmes sont minimisés grâce à l'utilisation des smart pointer.
 
 Mais c'est justement cette capacité à accéder directement à la mémoire qui rend ce langage important pour l'écriture d'un système d'exploitation, de drivers. C'est également cette gestion de la mémoire qui lui sa rapidité d'exécution.
 
@@ -78,10 +78,10 @@ On commence par créer un nouveau `dev container` dans vscode. Ici, nous allons 
 
 ![alt text](image.png)
 
-Vous pouvez selectionnez les options par défaut.
+Vous pouvez selectionner les options par défaut.
 ![alt text](image-1.png)
 
-Vous pouvez compiler le code avec la commande suivante:
+Vous pouvez compiler le code avec la commande suivante :
 ```bash
 $ g++ -o prog main.cpp
 ```
@@ -99,7 +99,7 @@ Dans le cas où on ne compile qu'un seul fichier qui contient une fonction `main
 ```C++
 #include <iostream>
 ```
-Ici on indique que l'on va utiliser la librairie standard d'entrée/sortie du C++. Cette instruction commence par un `#` ce qui informe au pré-processeur d'insérer ici le contenu du fichier `iostream.h` pour son utilisation plus loin dans le code. Dans notre cas les objet [`std::cout`](https://en.cppreference.com/w/cpp/io/cout.html) et [`std::endl`](https://en.cppreference.com/w/cpp/io/manip/endl).
+Ici, on indique que l'on va utiliser la librairie standard d'entrée/sortie du C++. Cette instruction commence par un `#` ce qui informe au pré-processeur d'insérer ici le contenu du fichier `iostream.h` pour son utilisation plus loin dans le code. Dans notre cas les objet [`std::cout`](https://en.cppreference.com/w/cpp/io/cout.html) et [`std::endl`](https://en.cppreference.com/w/cpp/io/manip/endl).
 
 
 ```C++
@@ -115,7 +115,7 @@ int main() {
 }
 ```
 
-Comme dans tous les langages de programmation, on doit avoir un point d'entrée au programme. En C++ comme souvent, ce point d'entrée s'appel `main`. Comme en Java on utilise les `{}` pour délimiter les blocs de code (fonctions, structure de contrôle), et le `;` est obligatoire pour signaler la fin d'une instruction.
+Comme dans tous les langages de programmation, on doit avoir un point d'entrée au programme. En C++ comme souvent, ce point d'entrée s'appelle `main`. Comme en Java, on utilise les `{}` pour délimiter les blocs de code (fonctions, structure de contrôle), et le `;` est obligatoire pour signaler la fin d'une instruction.
 
 ```C++
     cout << "Hello, World!" << endl ;
@@ -123,7 +123,7 @@ Comme dans tous les langages de programmation, on doit avoir un point d'entrée 
 
 `cout` est un objet de sortie de la librairie standard, un peu comme la fonction `print` en java ou python. 
 
-On utilise l'opérateur `<<` avec `cout` pour donner la chaine de caratère que l'on souhaite afficher. Cette opérateur peut s'enchainer, un peu comme une concaténation de chaîne, ici termine avec un retour à la ligne `<< endl`.
+On utilise l'opérateur `<<` avec `cout` pour donner la chaine de caractère que l'on souhaite afficher. Cet opérateur peut s'enchainer, un peu comme une concaténation de chaîne, ici termine avec un retour à la ligne `<< endl`.
 
 ### Les entrées / sorties en C++
 

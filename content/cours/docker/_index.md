@@ -259,7 +259,7 @@ Il existe de nombreuses alternatives à docker, voici les 2 plus populaires en c
 
 1. **Podman**: Remplacement quasi un pour un de Docker. Podman est compatible avec les commandes docker `$ docker run` -> `$ podman run`.
 Une des principales différences avec Docker c'est qu'il n'utilise pas une architecture client serveur.
-2. **LXC / LXD**: Gestion de conteneur inclus dans le noyeau linux. Les premières versions de Docker étaient basée sur LXC. LXD s'appuie sur LXC, pour offrir une meilleures expériences utilisateur.
+2. **LXC / LXD**: Gestion de conteneur inclus dans le noyeau linux. Les premières versions de Docker étaient basées sur LXC. LXD s'appuie sur LXC, pour offrir une meilleure expériences utilisateur.
 
 
 ## Source

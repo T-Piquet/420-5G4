@@ -145,7 +145,7 @@ Ici, le changement principal se passe au niveau de la déclaration du type du pa
 
 Lorsque la fonction est appelée, ce n'est pas la valeur de `x` qui est copié, mais l'adresse de la variable `x`. Maintenant `x` et `a` désignent la même adresse mémoire, ce qui fait que la modification de `a` implique une modification de `x`.
 
-Au delà d'autoriser la modification de la variable, le gros avantage de cette méthode est qu'on n'effectue pas de copie de valeurs. Si vous voulez donner accès à un gros volume de données à une fonction, vous fournissez seulement l'adresse de début des données au lieu de faire une copie locale volumineuse (ce qui couterait beaucoup d'espace RAM et aussi du temps pour la copie). C'est de cette manière qu'on passe les objets (`class`) en paramètre.
+Au-delà d'autoriser la modification de la variable, le gros avantage de cette méthode est qu'on n'effectue pas de copie de valeurs. Si vous voulez donner accès à un gros volume de données à une fonction, vous fournissez seulement l'adresse de début des données au lieu de faire une copie locale volumineuse (ce qui couterait beaucoup d'espace RAM et aussi du temps pour la copie). C'est de cette manière qu'on passe les objets (`class`) en paramètre.
 
 Nous verrons plus en détails le fonctionnement des **pointeurs**  [ici](../pointeurs). Mais le principe est le même avec une syntaxe un peu différente.
 
