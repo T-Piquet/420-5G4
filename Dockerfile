@@ -9,5 +9,7 @@ RUN wget -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.
     apt-get install -y /tmp/hugo.deb && \
     rm /tmp/hugo.deb
 
+RUN mkdir /src/ ; cd /src
+
 # Set default command
-CMD ["hugo", "version"]
+#CMD ["hugo", "version"]
