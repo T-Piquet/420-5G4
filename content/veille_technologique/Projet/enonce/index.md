@@ -18,14 +18,15 @@ Vous devrez rédiger des notes de cours, écrire un laboratoire pratique et mett
 
 ## Évaluation
 
-Ce travail compte pour **35%** de votre session et sera corrigé selon la grille suivante:
+Ce travail compte pour **40%** de votre session et sera corrigé selon la grille suivante:
 
 |Critère|Pourcentage|
 |---|---|
-|Notes de cours|**15%**|
-|Laboratoire pratique|**10%**|
-|Veille technologique|**10%**|
-|**Total**|**35%**|
+|Notes de cours       | **10%**|
+|Laboratoire pratique | **10%**|
+|Veille technologique | **10%**|
+|Demo                 | **10%**|
+|**Total**            | **40%**|
 
 
 ## Spécifications détaillées
@@ -84,6 +85,16 @@ L'utilisation d'au moins une source humaine: un professeur, un contact, un coll�
 - L'abonnement à trois flux RSS de sites Web différents.
 
 Il va sans dire que tous les éléments doivent être jugés pertinents (me consulter en cas de doute). Vous décrivez les choix que vous avez faits et les démontrez à l'aide d'une capture d'écran. 
+
+### Démo
+
+Vous devrez également faire une démonstration technique de votre projet. S'il s'agit d'une veille technologique plus théorique, cela prendra la forme d'une présentation.
+
+Dans le cas ou le projet est fait en groupe, tous les membres du groupes doivent être en mesure de faire la démo. La personne faisant la démo sera tiré au hasard le jour j. Soyez tous prêt !
+
+Vous pouvez utilisez votre atelier comme base de présentation, mais attention, la démonstration sera beaucoup plus courte, environ 5 minutes avec les questions.
+
+**La démonstration aura lieu en classe.**
 
 ## Exemple de technologies a explorer
 - *Langages*: Rust, Go, 
