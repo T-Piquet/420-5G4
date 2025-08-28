@@ -23,6 +23,8 @@ Voici une video vous montrant l'utilisation d'un dev container de base C++, en s
 
 <iframe src="https://cmontmorency365-my.sharepoint.com/personal/thomas_piquet_cmontmorency_qc_ca/_layouts/15/embed.aspx?UniqueId=b1bcd229-6494-44d6-918a-04e7d8da4cc1&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="dev_container_cpp"></iframe>
 
+(Si la version embarqué de la vidéo ne marche pas, cliquez [ici](https://cmontmorency365-my.sharepoint.com/:v:/g/personal/thomas_piquet_cmontmorency_qc_ca/ESnSvLGUZNZEkYoE59jaTMEBBaVbicUTPTjWSjb3umg_LQ?e=rkjdq9&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D))
+
 ### Dev container avec Dockerfile pré-existant
 
 1. Ouvrez le répertoire avec où vous souhaitez développer votre projet avec votre `Dockerfile`.
