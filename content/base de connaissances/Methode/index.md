@@ -17,3 +17,5 @@ Voici un exemple de méthode qui vous sera utile tous le long du cours :
 
 > [!tip] 
 > La dernière étape est plus simple a faire hors du conteneur, normalement vos autorisations github sont déjà faites sur la machine hôte. Mais rien ne vous empêche de donner ces authorisations dans le conteneur.
+
+Vous trouverez une vidéo de démonstration [ici](../vscode/#dev-container-de-base)

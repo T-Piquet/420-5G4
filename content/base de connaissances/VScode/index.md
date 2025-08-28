@@ -17,6 +17,14 @@ https://code.visualstudio.com/docs/setup/linux
 ## Dev containers
 - [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) : extension qui permet l'intégration de docker comme environnement de développement pour vscode.
 
+### Dev container de base
+
+Voici une video vous montrant l'utilisation d'un dev container de base C++, en suivant en partie la méthodologie montrée [ici](../methode/)
+
+<iframe src="https://cmontmorency365-my.sharepoint.com/personal/thomas_piquet_cmontmorency_qc_ca/_layouts/15/embed.aspx?UniqueId=b1bcd229-6494-44d6-918a-04e7d8da4cc1&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="dev_container_cpp"></iframe>
+
+### Dev container avec Dockerfile pré-existant
+
 1. Ouvrez le répertoire avec où vous souhaitez développer votre projet avec votre `Dockerfile`.
 1. Appuyez sur : <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd> pour activer la palette de commande de vscode.
 2. Cherchez `Dev Containers: Open Folder in Container`

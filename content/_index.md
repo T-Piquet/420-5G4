@@ -8,7 +8,7 @@ weight = 0
 
 - [**Base de connaissances**](./base-de-connaissances) : ensemble de connaissances nécessaires pour le cours, il s'agit de pages de références pouvant aller plus loin que le contenu abordé en cours.
 - [**Cours**](./cours) : Contenu qui sera abordé tout au long de la session.
-- [**Veille technologique**](./veille_technologique/) : 
+- [**Veille technologique**](./veille_technologique/) : Cours pour le projet de fin de session
 
 ---
 
