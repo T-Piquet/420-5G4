@@ -229,7 +229,7 @@ La commande ci-dessous permet de construire l'image. Le `.` à la fin de la comm
 $ docker build -t cpp/test:0.1 .
 ```
 
-Cette commande exécute le conteneur à partir du conteneur qu'on vient de créer :
+Cette commande exécute le conteneur à partir de l'image qu'on vient de créer :
 ```
 $ docker run -it --rm cpp/test:0.1 
 ```
