@@ -7,7 +7,7 @@ weight = 100
 +++
 
 > [!info]- **Conventions**
-> - Dans les exemples quand on parle de `Entrée utilisateur` on sous entend d'utiliser `cin` et d'afficher quelle entrée est attendue.
+> - Dans les exemples quand on parle de `Entrée utilisateur` on sous entend d'utiliser un ou plusieurs `cin` et d'afficher quelle entrée est attendue.
 >
 > - Quand on parle de `Données`, on signifie des valeurs codées en dur dans le fichier `.cpp`.
 
