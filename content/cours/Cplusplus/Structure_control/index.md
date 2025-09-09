@@ -16,17 +16,13 @@ using namespace std;
 int main(){
     int n = -8;
 
-    // Check if the number is positive
-    if(n > 0)
+    if(n > 0){
         cout << "Positive";
-  
-    // Check if the number is negative
-    else if(n < 0)
+    } else if(n < 0){
         cout << "Negative";
-  
-    // If the number is neither positive nor negative
-    else
+    }else{
         cout << "Zero";
+    }
 
     return 0;
 }
@@ -154,8 +150,9 @@ int main(){
     for(int i = 1; i < 10; i++){
 
       	// Skip the execution for i = 5
-        if (i == 5)
+        if (i == 5){
             continue;
+        }
         cout << i << " ";
     }
     return 0;
@@ -178,8 +175,9 @@ int main(){
     for(int i = 1; i < 10; i++){
 
         // Breaking Condition
-        if(i == 5)
+        if(i == 5){
             break;
+        }
         cout << i << " ";
     }
   
