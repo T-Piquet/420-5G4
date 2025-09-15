@@ -108,18 +108,6 @@ Sortie : 19 non trouvé dans arr[]
 ```
 
 ## Q9.
-
-**Écrivez un programme pour supprimer les doublons d'un tableau trié.**
-
-Dans ce problème, vous devez supprimer tous les éléments dupliqués d'un tableau trié et retourner la nouvelle taille du tableau.
-
-**Exemple :**
-
-- Données : arr[] = {1, 1, 2, 2, 3, 4, 4, 5}
-- Sortie : Tableau sans doublons : {1, 2, 3, 4, 5}, Nouvelle taille : 5
-
-## Q10.
-
 **Écrivez un programme pour afficher le tableau après qu'il soit pivoté 
 vers la droite K fois.**
 
@@ -131,6 +119,25 @@ arr[] = {10, 11, 7, 33, 5, 1};
 K = 3
 Sortie : Tableau après rotation : {33, 5, 1, 10, 11, 7}
 ```
+
+## Q9 bis
+**Ecrivez une bibliothèque cpp**
+Reprennez les exercices 5 6 8 et 9 pour créer une bibliothèque de traitement de tableaux d'entier. Vous devrez avoir 3 fichiers :
+- libTableau.h
+- libTableau.cpp
+- main.cpp qui fait au moins un appel a chacune des fonctions de la lib.
+
+## Q10.
+
+**Écrivez un programme pour supprimer les doublons d'un tableau trié.**
+
+Dans ce problème, vous devez supprimer tous les éléments dupliqués d'un tableau trié et retourner la nouvelle taille du tableau.
+
+**Exemple :**
+
+- Données : arr[] = {1, 1, 2, 2, 3, 4, 4, 5}
+- Sortie : Tableau sans doublons : {1, 2, 3, 4, 5}, Nouvelle taille : 5
+
 
 ## Q11.
 **Écrivez un programme pour convertir une chaîne en entier.**
