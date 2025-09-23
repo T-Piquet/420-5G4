@@ -31,8 +31,8 @@ Ce travail compte pour **20%** de votre session et sera corrigé selon la grille
 
 |Critère|Pourcentage|
 |---|---|
-| Completion du code manquant | **10%** |
-| Ajout nouvelle fonctionalité | **5%** |
+| Completion du code manquant | **5%** |
+| Ajout de nouvelles fonctionalitées | **10%** |
 | Veille technologique | **5%** |
 |**Total**| **20%** |
 
@@ -43,34 +43,35 @@ Ce travail compte pour **20%** de votre session et sera corrigé selon la grille
 - Ce projet utilise cmake, pensez à créer un répertoire `build`. Comme vu [ici](../fonctions/#cmake)
 - Le code est disponible sur git
 
-<i class="fa-brands fa-github"></i>
-Repos Github classroom du projet
+[<i class="fa-brands fa-github"></i> Repos Github](https://classroom.github.com/a/c3m8ThN0) classroom du projet
 
 ### Combler les trous dans le code
 
 Il y a une erreur de faite avant le premier commit, et une partie du code a été perdu, le fichier `book.cpp` est incomplet. Servez-vous du fichier d'entête pour le compléter.
 
-TODO: retirer une autre fonction avec de la STL dedans
-TODO: faire le tri des features features a 10%
+### Ajout de nouvelles fonctionnalitées
 
-### Ajout d'une nouvelle fonctionnalités
+Vous devez ajouter 2 nouvelles fonctionnalitées tirée du backlog du projet : 
+- 1 fonctionnalité au choix dans *Interface et Expérience Utilisateur*
+- 1 fonctionnalité au choix dans *Gestion des Données*
+- La fonctionnalité bonus n'est pas obligatoire, mais c'est un défi intéressant. De plus, elle vous permettra d'être prioritaire pour choisir la date de présentation de votre projet de fin session.
+
 #### Interface et Expérience Utilisateur
 
-- Tri des résultats par titre, auteur, date d'ajout
-- Filtres avancés (par genre, année de publication, disponibilité)
-- Confirmation avant suppression de livres/utilisateurs
-- numérotation automatique des ID
+- Confirmation avant suppression de livres/utilisateurs.
+- numérotation automatique des ID utilisateurs.
+- Validation robuste des entrées (ISBN format, nom utilisateur, etc.)
+- Détection des doublons plus intelligente (même titre, auteur, ISBN).
 
 #### Gestion des Données
 
-- Validation robuste des entrées (ISBN format, emails, etc.)
-- Détection des doublons plus intelligente (même titre + auteur)
-- Import/Export CSV pour faciliter la gestion en lot
-- Logs d'activité (qui a emprunté quoi et quand)
+- Tri des résultats par titre, auteur pour l'affichage (utilisation de la fonction de tri de la STL).
+- Import/Export CSV pour faciliter la gestion en lot (en plus du format actuel).
 
+#### Bonus
+- Logs d'activité (qui a emprunté quoi et quand) avec sauvegarde dans un fichier.
 
 ### Veille technologique
-
 Donnez ces explications dans le README.md à la racine du dépôt. Un paragraphe par questions est suffisant.
 
 #### C++
