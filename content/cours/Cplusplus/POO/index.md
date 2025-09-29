@@ -211,7 +211,7 @@ class classeDerivee : mode_heritage classeBase{
 > [!tip]
 >Pour rappel les membres privé de la classe de base ne sont pas accessible à la classe dérivée. Si vous souhaitez utiliser les variables privée de votre classe de base dans votre classe dérivée, vous devez avoir créé des accesseurs publique dans votre classe de base.
 
----
+#### Surchage des fonctions
 
 Pour surcharger une fonction de classe lors d'un héritage en C++, il utilise le mot clef `virtual` :
 
@@ -247,6 +247,55 @@ int main() {
 Affichage :
 ```
 Fonction de la classe dérivée
+```
+
+#### Classe virtuelle pure
+
+Dans certain cas, on peut vouloir créer des classe virtuelles pure, à l'instar des interfaces en java. C'est à dire des classes qu'on ne peut pas instancier, seulement s'en servir comme base d'héritage pour d'autres classes.
+
+Pour obtenir une classe virtuelle pure, il suffit de déclarer une fonction virutelle pure dans le corps de la classe:
+```C++
+virtual void draw() = 0;  // Pure virtual function
+```
+
+#### Surcharge des opérateurs
+
+Comme en Java ou en python, on peut surcharger les opérateurs.
+Voici tous les opérateurs disponnible en C++ :
+`+ - * / % ^ & | ~ ! = < > += -= *= /= %= ^= &= |= << >> >>= <<= == != <= >= <=>(since C++20) && || ++ -- , ->* -> () []`
+
+En C++ on a certains opérateur qu'on va déclarer comme fonction membre de la classe, et d'autre à l'extérieur de la classe.
+
+**Directives Clés**
+- Opérateurs de flux (`<<`, `>>`): Toujours non-membre
+- Opérateurs d'affectation: Toujours membre (exigence du langage)
+- Opérateurs d'indice, d'appel de fonction, d'accès aux membres: Toujours membre (exigence du langage)
+- Opérateurs arithmétiques binaires: Généralement non-membre pour la symétrie
+- Opérateurs d'affectation composée: Généralement membre
+- Opérateurs unaires: Généralement membre
+- Opérateurs de comparaison: Souvent non-membre pour la symétrie (surtout avec le moderne <=> de C++20)
+
+Voici un exemple de surcharge de l'opérateur `<<` :
+
+```C++
+class MyClass {
+private:
+    int value;
+    string name;
+    
+public:
+    MyClass(int v, const string& n) : value(v), name(n) {}
+    
+    // Provide public getters
+    int getValue() const { return value; }
+    const string& getName() const { return name; }
+};
+
+// Non-member function using public interface
+ostream& operator<<(ostream& os, const MyClass& obj) {
+    os << "MyClass{value: " << obj.getValue() << ", name: " << obj.getName() << "}";
+    return os;
+}
 ```
 
 ## Les fichiers d'entête et les classes
@@ -399,3 +448,7 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 - https://www.geeksforgeeks.org/cpp/shallow-copy-and-deep-copy-in-c/
 - https://www.geeksforgeeks.org/cpp/cpp-polymorphism/
 - https://www.geeksforgeeks.org/cpp/inheritance-in-c/
+
+Surcharge des opérateurs : 
+- https://en.cppreference.com/w/cpp/language/operators.html
+- https://intellipaat.com/blog/operator-overloading-in-cpp/
