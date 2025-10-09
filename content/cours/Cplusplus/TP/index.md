@@ -31,10 +31,10 @@ Ce travail compte pour **20%** de votre session et sera corrigé selon la grille
 
 |Critère|Pourcentage|
 |---|---|
-| Completion du code manquant | **5%** |
-| Ajout de nouvelles fonctionalitées | **10%** |
-| Veille technologique | **5%** |
-|**Total**| **20%** |
+| Completion du code manquant | **25%** |
+| Ajout de nouvelles fonctionalitées | **50%** |
+| Veille technologique | **25%** |
+|**Total**| **100%** |
 
 
 ## Spécifications détaillées
@@ -54,7 +54,7 @@ Il y a une erreur de faite avant le premier commit, et une partie du code a ét�
 Vous devez ajouter 2 nouvelles fonctionnalitées tirée du backlog du projet : 
 - 1 fonctionnalité au choix dans *Interface et Expérience Utilisateur*
 - 1 fonctionnalité au choix dans *Gestion des Données*
-- La fonctionnalité bonus n'est pas obligatoire, mais c'est un défi intéressant. De plus, elle vous permettra d'être prioritaire pour choisir la date de présentation de votre projet de fin session.
+- La fonctionnalité bonus n'est pas obligatoire, mais c'est un défi intéressant. Elle compte pour 10% de plus. Si jamais vous obtenez une note supérieur a 100%, points au dessus de 100 seront reporté pour la note suivante.
 
 #### Interface et Expérience Utilisateur
 

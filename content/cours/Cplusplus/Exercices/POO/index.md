@@ -78,3 +78,7 @@ Aire totale de toutes les formes: 77.2655
 2. Comment implémenteriez-vous un système de sérialisation pour sauvegarder les formes ?
 3. Que se passerait-il si vous essayiez d'instancier directement la classe `Forme` ?
 
+## Solution 
+
+> [!warning]- Solution
+> [geometrie.cpp](geometrie.cpp)

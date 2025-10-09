@@ -283,3 +283,7 @@ Créez un programme avec un menu qui permet à l'utilisateur de :
 9. Quitter
 Votre choix : _
 ```
+## Solution 
+
+> [!warning]- Solution
+> [liste_chainee.cpp](liste_chainee.cpp)
