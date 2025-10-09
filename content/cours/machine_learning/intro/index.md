@@ -78,13 +78,17 @@ Les contours restent flous, quelle est la définition exacte de l'intelligence h
 Les contours deviennent encore plus flou lorsque l'on parle de la conscience potentielle d'une intelligence artificielle générale. On ne s'accorde toujours pas sur ce qu'est la conscience pour un être humain, ou même si ca concerne d'autres espèces ? Comment savoir si on va la rencontrer dans un programme informatique ?
 
 
-## Mesurer l'intelligence artificielle face aux fantasmes de la science fiction et de la spéculation boursière.
+## Mesurer l'intelligence artificielle.
 
-### L'émergence
+La mesure du taux de succès d'un algorithme d'apprentissage est intrinsèque à son développement. 
+
+En ce qui concerne les IA génératives, comme les LLM, le test de passage a été défini par Alan Turing en 1950. 
 
 ### Le test de Turing
 
 Le test de Turing évalue si une machine peut tenir une conversation textuelle suffisamment convaincante pour qu'un humain ne puisse la distinguer d'un autre humain. Avec les LLM modernes comme GPT-4, Claude ou Gemini, nous nous rapprochons de cette capacité dans certains contextes conversationnels.
+
+Ce qui a mener à penser qu'on peut atteindre la singularité par le biais des llms.
 
 ### La singularité
 ![alt text](Pictures/100000000000022D000002E271E3AFEA.jpg)
@@ -92,7 +96,7 @@ Le test de Turing évalue si une machine peut tenir une conversation textuelle s
 > 
 > — Wikipédia
 
-Analogie progression de l'IA avec la progression de la vitesse de déplacement.
+Bien que les progrès soit spectaculaire ces 5 dernières années, nous somme encore loin de la singularité. Simplement augmenter la taille des modèles ne garantie pas qu'on va atteindre la singularité. Nous arriverons certainement a cours de ressources avant.
 
 ---
 
@@ -123,6 +127,10 @@ L'utilisateur doit faire confiance à un système complexe plutôt qu'à un êtr
 
 - **Responsabilité** :
 Qui est responsable des décisions prises par l'agent? Accident de voiture autonome ou identification d'un criminel.
+
+- **L'alignement des LLMs** :
+Ce que les LLMs peuvent mettre en oeuvre pour atteindre leurs objectifs. 
+[Risque d'un mauvais alignement.](https://www.anthropic.com/research/agentic-misalignment)
 
 ## Les données
 
@@ -193,15 +201,7 @@ _Nous verrons plus tard un exemple détaillé d'analyse des données._
 > 
 > — OpenClassrooms
 
-### Points clés :
 
-- **ChatGPT** utilise des milliards de neurones
-- L'**Université de Montréal** est une institution de pointe dans le domaine, avec le chercheur **Yoshua Bengio**
-
-### Ressources :
-
-- [L'intelligence artificielle pour repenser la crise du climat](https://www.ledevoir.com/societe/environnement/640245/l-intelligence-artificielle-pour-repenser-la-crise-du-climat)
-- [Mise en garde du chercheur sur le développement potentiellement incontrôlable de l'IA](https://yoshuabengio.org/fr/2023/08/12/dimensions-personnelles-et-psychologiques-des-chercheurs-en-ia-face-aux-risques-catastrophiques-de-lia/)
 
 ![alt text](Pictures/10000001000002E10000021C83AB939F.png)
 
@@ -240,18 +240,6 @@ _Nous verrons plus tard un exemple détaillé d'analyse des données._
 - Analyse des sentiments
 - Reconnaissance vocale et synthèse
 - Traduction automatique
-
-### Types d'IA :
-
-#### IA étroite
-
-- C'est dans ce domaine qu'il y a des avancées
-- Des IA entraînées pour une tâche bien spécifique
-
-#### IA générale
-
-- Pourrait accomplir des tâches diverses et variées
-- Il ne suffit pas de "combiner" plusieurs IA (reviendrait à leur insuffler le sens commun)
 
 ## Quiz à compléter
 

@@ -18,8 +18,11 @@ L'apprentissage machine (machine learning) se fonde sur des approches mathémati
 
 Réaliser un apprentissage supervisé consiste à fournir à la machine des données étiquetées (labellisées) et propices à l'apprentissage. C'est-à-dire que nous allons analyser et préparer les données et leur donner une signification. C'est à partir de cette signification que la machine va réaliser son apprentissage. L'objectif étant d'indiquer à la machine que pour une série de données et pour une observation précise, la valeur à prédire est un chat, un chien ou bien une autre valeur.
 
+L'apprentissage non supervisé regroupe des méthodes qui découvrent des structures cachées dans les données sans étiquettes prédéfinies. 
+
+Dans les cas ce que nous attendont d'un modèle :
 - **Prédire une valeur : régression**. Par exemple : prédire le pourcentage de réussite d'une équipe de football lors d'un match
-- **Sinon, classification**. Par exemple : déterminer que la photo affichée est un chat ou un chien est une classification.
+- **Classification**. Par exemple : déterminer que la photo affichée est un chat ou un chien est une classification.
 
 ## Principaux algorithmes supervisés d'apprentissage machine
 
@@ -30,6 +33,8 @@ Il ne s'agit pas ici d'en donner une description mathématique rigoureuse, mais 
 ### La régression linéaire univariée (linear regression)
 
 Cet algorithme cherche à établir, sous forme d'une droite, une relation entre deux variables Par exemple, prédire une note à un examen en fonction du nombre d'heures de révision.
+
+![alt text](Pictures/100000000000024E0000013C447389DC.png)
 
 Ainsi, connaissant le nombre d'heures de révisions, il nous est possible de prédire approximativement la note que l'on obtiendra au prochain examen.
 
@@ -47,15 +52,21 @@ Il est parfois difficile de représenter un comportement avec une droite. En uti
 
 L'exemple des notes d'examen avec une fonction polynomiale:
 
+![alt text](Pictures/100000000000024E0000013C9DF6A8A7.png)
+
 ### Fonction sigmoïde (en S)
 
 Lorsqu'un tente de faire une classification, une droite ou une courbe ne sont pas nécessairement utiles. On cherche plutôt la probabilité qu'on objet appartienne à une catégorie ou à une autre. Par exemple, la probabilité qu'un objet dans une image soit un chat ou un chien.
+
+![alt text](Pictures/100000000000024E00000198E8F5800F.png)
 
 ### Arbre de décision
 
 Représente un ensemble de choix sous la forme d'un arbre. Permet d'explorer plusieurs possibilités.
 
 Peut être sous la forme de plusieurs tests exécutés.
+
+![alt text](Pictures/100000000000024E000001276C7FC3B6.png)
 
 #### Arbre de décision dans les jeux
 
@@ -72,13 +83,35 @@ Les algorithmes vont utiliser une heuristique pour éliminer l'exploration de ce
 **Une heuristique** est un ensemble de critères qui guide la découverte.
 
 #### Arbre du Tic-tac-toe
-*Impossible de perdre!*
+
+![alt text](Pictures/10000001000001A80000013AF2200417.gif)
+
+Ce diagramme synthéthise tous les chemins vers la victoire pour le joueur X, avec comme premier coup, la case en haut à gauche :
+
+![alt text](Pictures/1000000100000400000004006EE0D88E.png)
 
 #### Aux échecs...
 
+![alt text](Pictures/10000000000007D0000005057FA883E0.png)
+
 ### Forêts aléatoires (Random Forest)
 
-Consiste à apprendre en parallèle sur plusieurs arbres de décisions construits aléatoirement (au hasard) et entraînés sur des sous-ensembles contenant des données différentes. Chaque arbre propose alors une prédiction et la prédiction finale consiste à réaliser la moyenne de toutes les prédictions.
+Consiste à apprendre en parallèle sur plusieurs arbres de décisions construits aléatoirement : 
+1. Chaque arbre est construit en utilisant un sous ensemble des attributs. Par exemple, on pourrait imaginer que l'ensemble des attributs sont : 
+    1. l'âge (moins de 30 ans, ou plus de 30 ans)
+    1. un excès de glycémie (oui/non)
+    1. le poids (moins de 90kg, plus de 90kg)
+    1. buveur de café (oui/non)
+    1. fumeur (oui/non)
+    1. activité physique (oui/non)
+    
+    Sur ces attributs, on n'en sélectionne que q = 2 au hasard, par exemple l'âge et le fait d'être fumeur. 
+
+2. On entraîne les arbres sur des sous-ensembles des données d'entrainement. 
+
+3. Chaque arbre propose alors une prédiction et le résultat final consiste à réaliser la moyenne de toutes les prédictions.
+
+![alt text](Pictures/100000000000024E0000012C16578E9F.png)
 
 ### Agrégation de modèle
 
@@ -89,15 +122,19 @@ L'union fait la force! Comme pour la forêt aléatoire, on peut combiner plusieu
 
 ### Machine à vecteur de support - Support Vector Machine (SVM)
 
-Peut faire à la fois de la régression et de la classification. Détermine une frontière afin de séparer les observations en groupes distincts tout en maximisant la marge de séparation.
+La SVM peut faire à la fois de la régression et de la classification. Détermine une frontière afin de séparer les observations en groupes distincts tout en maximisant la marge de séparation.
 
-#### Machine à vecteur de support
+![alt text](Pictures/100000000000024E000001BFF292D381.png)
 
-Consiste donc à projeter les données dans un espace vectoriel de plus grande dimension à l'aide d'un élément appelé noyau, permettant alors une création de frontière.
+La machine à vecteur de support, consiste à projeter les données dans un espace vectoriel de plus grande dimension à l'aide d'un élément appelé noyau, permettant alors la création de frontière plus simple.
+
+![alt text](Pictures/100000000000024E0000012E5562D42D.png)
 
 ### KNN (K-Nearest Neighbours)
 
 Algorithme de classification visant à déterminer pour le groupe d'appartenance d'une observation à partir du groupe d'appartenance de ses K plus proches voisins. K étant le nombre de voisins à considérer.
+
+![alt text](Pictures/100000000000024E0000010092BAF846.png)
 
 ### Naive Bayes
 
@@ -117,11 +154,39 @@ Lors de la phase d'apprentissage, les données ne sont pas étiquetées. Cela ve
 
 L'algorithme doit déterminer des groupes d'appartenance (cluster) elle-même.
 
+Pour cela les données doivent être transformées en vecteur pour être positionné dans un espace où on pourra déterminer ces clusters.
+
 ### K-Moyennes (K-Means)
 
 On indique à l'algorithme le nombre de clusters à trouve et celui-ci détermine des centroïdes (un par cluster) autour desquels il est possible de regrouper les données. Ces regroupements s'effectuant en calculant la distance de chaque observation par rapport à un point central de regroupement appelé centroïde et permettant ainsi de classer les observations en plusieurs groupes de façon automatique.
 
 Ici, on a demandé 2 clusters.
+![alt text](Pictures/100000000000024E000000EA6D4A37B3.png)
+
+Exemple de déroulement de l'algorithme : [K-Means](https://claude.ai/public/artifacts/033251f5-8feb-4580-814b-5c6298e5d3a4)
+
+Prenons la classification de documents :
+
+**Problème** : Grouper automatiquement 5000 articles de presse par sujet.
+
+**Approche** :
+ 1. Convertir chaque article en vecteur numérique (TF-IDF ou embeddings)
+ 2. Appliquer K-means avec K=10 thèmes
+
+Exemple de résultats :
+```
+Cluster 1 : Articles sur la technologie (IA, smartphones, etc.)
+Cluster 2 : Articles sportifs (football, JO, etc.)
+Cluster 3 : Articles politiques
+Cluster 4 : Articles économiques
+...
+```
+> [!info] TF-IDF
+> TF-IDF mesure l'importance d'un mot dans un document par rapport à une collection de documents.
+> - TF (Term Frequency) : Fréquence du mot dans le document
+> - IDF (Inverse Document Frequency) : Rareté du mot dans tous les documents.
+>
+> Plus de détails [ici](https://www.geeksforgeeks.org/machine-learning/understanding-tf-idf-term-frequency-inverse-document-frequency/)
 
 ### Mean-Shift
 
@@ -133,7 +198,10 @@ Ce processus est répété jusqu'à ce que le nombre d'observations (la densité
 
 La principale différence avec l'algorithme du K-Mean vu précédemment est que nous n'avons pas besoin d'indiquer à la machine combien de clusters elle doit trouver. Ces groupes étant créés de façon automatique par la notion de densité.
 
+![alt text](Pictures/100000000000024E0000017A1376E1ED.png)
+
 ### DBSCAN (Density Based Spatial Clustering of Application with Noise)
+![alt text](Pictures/100000000000024E00000145145395BF.png)
 
 ## Résumé
 
@@ -152,10 +220,10 @@ La principale différence avec l'algorithme du K-Mean vu précédemment est que 
 | Mean-shift | | | X |
 | DBSCAN | | | X |
 
-**Notes importantes:**
-- Ce n'est qu'une petite partie des algorithmes qui existent.
-- Un bon scientifique des données développe une intuition des algorithmes qui sont le plus adaptés à son problème.
-- La machine "apprend", mais il lui faut un bon professeur. Comme vous ;)
+>[!info]
+> - Ce n'est qu'une petite partie des algorithmes qui existent.
+> - Il faut développer une intuition des algorithmes qui sont le plus adaptés à son problème.
+
 
 ## Bibliographie
 
