@@ -4,27 +4,6 @@ weight = 110
 draft = true
 +++
 
-## Objectif
-
-Le but de ce premier laboratoire est de vous faire prendre conscience du travail que représente l'acquisition et la préparation des données avant de pouvoir utiliser un algorithme d'apprentissage machine. Pour me montrer que vous avez bien fait ce laboratoire, vous prenez une dizaine de captures d'écran de votre progression, dont le tableau final, que vous remettez sur Moodle.
-
-## Prérequis
-
-Il faut installer Python 3.8.6¹ et PyCharm pour réaliser le laboratoire. Les connaissances en Python ne sont pas nécessaires, le code est surtout à copier/coller. 
-
-**Attention :** Lorsque vous copier/collez, l'indentation n'est pas toujours correcte et vous devrez ajuster le code.
-
-Ce laboratoire compte pour 5% de votre session.
-
-*¹ La version de Python est importante parce qu'un outil d'un des prochains laboratoires ne supporte pas des versions plus récentes de Python.*
-
-## Source
-
-Le texte et l'exemple proviennent du livre :
-Vannieuwenhuyze, Aurélien. Intelligence artificielle vulgarisée, ENI, 2019. 434 p.
-
----
-
 ## L'univers des Pokémons
 
 Un Pokémon est un animal issu du monde des jeux vidéo. Chaque Pokémon possède des caractéristiques qui lui sont propres, à savoir son type (Pokémon d'herbe, Pokémon de feu…) lui donnant alors des facultés spéciales. Ainsi, le Pokémon nommé Dracofeu, de type Feu est capable de cracher du feu.
@@ -45,17 +24,17 @@ En tant que dresseurs de Pokémon du 21e siècle, nous allons faire appel au Mac
 
 ## Des données pour un apprentissage supervisé
 
-### 1. Des données basées sur l'expérience
+### Des données basées sur l'expérience
 
 Le Machine Learning est basé sur l'utilisation de données afin de permettre à notre ordinateur d'apprendre et de pouvoir réaliser des prédictions. Ces données doivent être en relation avec la mission qui nous est confiée et basée sur l'expérience.
 
 Dans notre cas, l'expérience consiste à connaître les issues de combats de Pokémons.
 
-### 2. Disposer d'un grand nombre de données d'apprentissage
+### Disposer d'un grand nombre de données d'apprentissage
 
 Une machine n'est pas capable d'apprendre sur un petit jeu de données, car elle doit pouvoir étudier toutes les possibilités pour réaliser ses prédictions. Par conséquent, plus le nombre de cas d'études pour résoudre un problème est important, plus les prédictions seront précises.
 
-### 3. Des données d'apprentissage et des données de tests
+### Des données d'apprentissage et des données de tests
 
 Tout comme l'être humain, il est nécessaire de valider l'apprentissage de la machine afin de pouvoir corriger les écarts d'apprentissage (appelés biais) et ajuster ou modifier le modèle d'apprentissage. Pour cela, nous avons besoin de données d'apprentissage et de données de tests.
 
@@ -80,7 +59,7 @@ Ainsi, un même jeu de données peut être exploité différemment en fonction d
 
 ---
 
-## 1. Création et configuration d'un nouveau projet Python
+## Création et configuration d'un nouveau projet Python
 
 Avant d'aller plus loin, nous devons créer un nouveau projet Python.
 
@@ -88,7 +67,7 @@ Pour ce faire, il convient d'ouvrir l'éditeur PyCharm puis dans le menu file, d
 
 Nous vous laissons le soin de choisir le nom du projet. À titre indicatif, nous l'avons appelé Pokemon.
 
-### a. Installation de modules
+### Modules python utilisés
 
 Un module peut être assimilé à une boîte à outils offrant des fonctions complémentaires dans un domaine dédié, nous évitant ainsi de les coder nous-mêmes. Concernant notre sujet, il existe des modules spécialisés dans l'analyse de données et l'intelligence artificielle, c'est donc tout naturellement que nous allons utiliser certains d'entre eux pour notre projet.
 
@@ -99,12 +78,7 @@ En voici la liste et leur rôle :
 | Numpy | Permet la manipulation de tableaux et matrices |
 | Pandas | Permet la manipulation et l'analyse de données |
 
-Pour pouvoir faire référence à ces modules et les utiliser dans notre script, nous devons les importer dans l'environnement virtuel de notre projet. Voici comment procéder :
-
-Cliquer sur **Python Packages** et installer les modules : Numpy, Pandas, Seaborn, Matplotlib.
-Prendre les versions les plus récentes.
-
-### b. Utilisation des modules dans un script Python
+### Utilisation des modules dans un script Python
 
 L'utilisation d'un module dans un script Python s'effectue par l'usage de la commande import comme le montre le code ci-dessous :
 
@@ -114,70 +88,31 @@ import numpy as nmp
 
 Cette ligne de code peut être interprétée comme "Importer le module numpy et l'utiliser sous le nom nmp". Ce nom est ce que l'on appelle un alias faisant référence au module importé. C'est cet alias que nous utiliserons par la suite dans notre script pour accéder aux fonctions proposées par le module.
 
-### c. Référencement des fichiers de données dans notre projet
+### Référencement des fichiers de données dans notre projet
 
 La dernière étape de création du projet consiste à importer les fichiers de données d'apprentissage et de tests.
 
 Pour ce faire, créez un nouveau répertoire dans la structure du projet en faisant un clic droit sur le nom du projet puis choisissez l'option New et la sous-option Directory. Donnez-lui ensuite le nom de **datas**.
 
-Déposez à présent dans le répertoire datas nouvellement créé les trois fichiers **pokedex.csv**, **combats.csv** et **tests.csv**.
+Déposez à présent dans le répertoire datas nouvellement créé les deux fichiers : 
+- [**pokedex.csv**](pokedex.csv)
+- [**combats.csv**](combats.csv)
 
 Notre projet est à présent créé et correctement configuré. Nous allons pouvoir commencer l'analyse des données.
 
----
-
-## Étape 1 : définir le problème à résoudre
+## Définir le problème à résoudre
 
 Comme évoqué en début de chapitre, la problématique à laquelle nous devons répondre consiste à préconiser au dresseur de Pokémon l'animal à utiliser lors d'un combat afin d'être le vainqueur.
 
 ---
 
-## Étape 2 : acquérir des données d'apprentissage et de tests
+## Préparation des données
 
-Les fichiers que nous avons téléchargés et copiés dans notre projet comportent les données nécessaires à la résolution de notre problème.
-
-Le fichier **Pokedex.csv** contient la liste des Pokémons et leurs caractéristiques. Le fichier **Combats.csv** est notre base de connaissance et d'apprentissage, car il contient une liste de combats de Pokémons et le résultat de chacun d'entre eux. Enfin, le fichier **tests.csv** nous permettra de valider le modèle d'apprentissage.
-
-### Listing des fichiers dont nous disposons
-
-À l'aide du module OS nous permettant d'utiliser les fonctionnalités de notre système d'exploitation, il nous est possible de lister les fichiers contenus dans le répertoire datas de notre projet, comme le montre le code ci-dessous :
-
-```python
-#------------------------------------------
-# IMPORT DES MODULES
-#------------------------------------------
-import os #Utilisation du module OS (operating system)
-
-#------------------------------------------
-# ANALYSE DES DONNEES
-#------------------------------------------
-#Récupération des fichiers contenus dans le répertoire datas
-#de notre projet
-listeDeFichiers = os.listdir("datas")
-
-#Quel est le nom de chaque fichier ?
-for fichier in listeDeFichiers:
-    print(fichier)
-```
-
-Si nous exécutons à présent notre script, il en résulte une liste exhaustive des fichiers dont nous disposons :
-
-```
-combats.csv
-pokedex.csv
-tests.csv
-Process finished with exit code 0
-```
-
----
-
-## Étape 3 : préparation des données
-
-Dans cette troisième étape, nous allons réaliser une lecture approfondie de nos données afin de comprendre leur rôle et les impacts qu'elles peuvent avoir dans l'objectif de prédiction que nous nous sommes fixé. Nous allons en quelque sorte essayer de résoudre le problème "manuellement" en formulant des hypothèses et en essayant de sélectionner les données qui répondront à celles-ci.
+Dans cette étape, nous allons réaliser une lecture approfondie de nos données afin de comprendre leur rôle et les impacts qu'elles peuvent avoir dans l'objectif de prédiction que nous nous sommes fixé. Nous allons en quelque sorte essayer de résoudre le problème "manuellement" en formulant des hypothèses et en essayant de sélectionner les données qui répondront à celles-ci.
 
 L'étude des données passe notamment par leur description (nom, type…), ainsi que par divers processus de traitement tels que le nettoyage (suppression des données inutiles, recherche des données manquantes) et enfin la combinaison entre elles, aussi appelée agrégation, dans le but de disposer d'un jeu de connaissances (observations) utilisables et appropriées à l'apprentissage et à l'atteinte de notre objectif.
 
-### 1. De quelles données disposons-nous ?
+### De quelles données disposons-nous ?
 
 Les fichiers de données dont nous disposons portent l'extension CSV (Comma Separated Value). C'est-à-dire que les données contenues dans ces fichiers sont séparées par des virgules. Pour vous donner une petite idée du contenu de ces fichiers, vous pouvez les ouvrir à l'aide du logiciel Excel ou via un simple éditeur de texte tel que Notepad ou bien encore directement dans le logiciel PyCharm.
 
@@ -185,34 +120,21 @@ Dans notre exemple, les fichiers sont de petite taille, pouvant être ouverts et
 
 La démarche de préparation des données sera donc réalisée en supposant que les fichiers dont nous disposons sont trop volumineux pour être ouverts dans Excel ou dans l'outil NotePad de Windows. Nous travaillerons donc à l'aveugle et procéderons donc à la découverte progressive de nos données.
 
-Nous allons utiliser le module Pandas, disposant d'une fonction de lecture de fichiers CSV (read_csv), capable de découper le contenu du fichier et de le stocker dans un tableau, appelé **Dataframe**, afin de pouvoir facilement analyser et manipuler les données.
-
-Un Dataframe est, au sens Python du terme, un dictionnaire dont les clés sont les noms des features et les valeurs sont les données contenues dans chaque caractéristique.
+Nous allons utiliser le module Pandas, disposant d'une fonction de lecture de fichiers CSV (read_csv), capable de découper le contenu du fichier et de le stocker dans un tableau, appelé **Dataframe**, afin de pouvoir facilement analyser et manipuler les données. Nous ajoutons quelques configurations pour une meilleure mise en forme avec les notebooks.
 
 ```python
-#------------------------------------------
-# IMPORT DES MODULES
-#------------------------------------------
-#Utilisation du module Pandas
-import pandas as pnd
+import pandas as pd
 
-#------------------------------------------
-# ANALYSE DES DONNEES
-#------------------------------------------
-#Chargement des données des Pokémons dans un
-#Dataframe nommé nosPokemons
-nosPokemons = pnd.read_csv("datas/pokedex.csv", encoding="ISO-8859-1")
+pd.set_option('display.max_columns', None)  # Show all columns
+pd.set_option('future.no_silent_downcasting', True)
 ```
+
+Un Dataframe est, au sens Python du terme, un dictionnaire dont les clés sont les noms des features et les valeurs sont les données contenues dans chaque caractéristique.
 
 Maintenant que les données sont stockées dans un Dataframe, il est important de connaître les libellés des colonnes pour avoir une idée des données dont nous disposons et de leur sémantique :
 
 ```python
-#------------------------------------------
-# ANALYSE DES DONNEES
-#------------------------------------------
-#Chargement des données des Pokémons dans un
-#Dataframe nommé nosPokemons
-nosPokemons = pnd.read_csv("datas/pokedex.csv", encoding="ISO-8859-1")
+nosPokemons = pd.read_csv("data/pokedex.csv")
 
 #Affichage des colonnes du Dataframe
 print(nosPokemons.columns.values)
@@ -243,7 +165,7 @@ Ce script donnant le résultat suivant, soit au total 12 colonnes :
 | GENERATION | Numéro de génération à laquelle appartient le Pokémon |
 | LEGENDAIRE | Le Pokémon est-il légendaire ? Il s'agit d'une donnée booléenne (Vrai ou Faux) |
 
-### 2. Affichage des dix premières lignes de nos données
+### Affichage des dix premières lignes de nos données
 
 Nous connaissons à présent les types de données propres à nos Pokémons, il nous faut à présent visualiser leur contenu.
 
@@ -252,26 +174,6 @@ Pour afficher les dix premières lignes de nos données, nous allons utiliser la
 Il faut également désactiver la limitation du nombre de colonnes affichées dans PyCharm, car par défaut seules 5 colonnes sont présentées et notre jeu de données en comporte 12.
 
 ```python
-#------------------------------------------
-# IMPORT DES MODULES
-#------------------------------------------
-#Utilisation du module Pandas
-import pandas as pnd
-
-#Désactivation du nombre maximum de colonnes du DataFrame à afficher
-pnd.set_option('display.max_columns',None)
-
-#------------------------------------------
-# ANALYSE DES DONNEES
-#------------------------------------------
-#Chargement des données des Pokémons dans un
-#Dataframe nommé nosPokemons
-nosPokemons = pnd.read_csv("datas/pokedex.csv")
-
-#Affichage des colonnes du Dataframe
-print(nosPokemons.columns.values)
-
-#Affichage des 10 premières lignes du Dataframe
 print(nosPokemons.head(10))
 ```
 
@@ -317,7 +219,7 @@ GENERATION LEGENDAIRE
 
 Il est à présent possible d'analyser plus en détail les données. En Data Science, chaque ligne de notre fichier est appelée une **observation** et chaque colonne une **feature** (caractéristique).
 
-### 3. Quelles sont les features de catégorisation ?
+### Quelles sont les features de catégorisation ?
 
 Des features dites de catégorisation permettent de classer les données dans différents groupes à l'aide de caractéristiques communes.
 
@@ -344,7 +246,7 @@ Connaître les données de catégorisation nous permet de définir des données 
 
 De par leur importance, lors de la phase de nettoyage des données, ces features ne devront pas être supprimées.
 
-### 4. Quelles données sont de type numérique ?
+### Quelles données sont de type numérique ?
 
 Dans le traitement des données, il est difficile de s'appuyer sur des données non numériques. Par conséquent, il est important de connaître les données numériques qui pourront être le socle de nos analyses.
 
@@ -365,7 +267,7 @@ Une donnée numérique continue, est une donnée ayant un nombre infini de valeu
 
 Dans notre jeu d'observation, les données numériques dont nous disposons sont de type numérique discret.
 
-### 5. Que faut-il penser de la feature LEGENDAIRE ?
+### Que faut-il penser de la feature LEGENDAIRE ?
 
 Nous avons vu que la feature LEGENDAIRE est de type booléen et qu'être un Pokémon légendaire est une chose rare et permet de disposer de force supplémentaire.
 
@@ -376,13 +278,15 @@ Il nous faut alors transformer cette donnée pour qu'elle devienne utilisable. S
 Pour ce faire, utilisons l'instruction suivante :
 
 ```python
-#Transformation de la colonne LEGENDAIRE en entier 0= FAUX et
-#1=VRAI
-nosPokemons['LEGENDAIRE'] = (nosPokemons['LEGENDAIRE']=='VRAI').astype(int)
-print(nosPokemons['LEGENDAIRE'].head(800))
+# remplacement de VRAI FAUX par 1 0
+nosPokemonsClean = nosPokemons
+nosPokemonsClean["LEGENDAIRE"] = nosPokemonsClean["LEGENDAIRE"].replace("VRAI", 1)
+nosPokemonsClean["LEGENDAIRE"] = nosPokemonsClean["LEGENDAIRE"].replace("FAUX", 0)
+nosPokemonsClean["LEGENDAIRE"] = nosPokemonsClean["LEGENDAIRE"].astype(int)
+print(nosPokemonsClean.head())
 ```
 
-### 6. Manque-t-il des données ?
+### Manque-t-il des données ?
 
 Maintenant que nous avons classé nos observations et transformé la feature LEGENDAIRE, la question à se poser est "Combien avons-nous d'observations ?"
 
@@ -390,7 +294,7 @@ Pour cela, nous allons utiliser la fonction shape du Dataframe :
 
 ```python
 #Comptage du nombre d'observations et de features
-print (nosPokemons.shape)
+print(nosPokemonsClean.shape)
 ```
 
 Voici le résultat :
@@ -404,7 +308,7 @@ Regardons à présent si des observations sont manquantes. Pour cela, nous pouvo
 
 ```python
 #Informations sur notre jeu de données
-print (nosPokemons.info())
+print(nosPokemonsClean.info())
 ```
 
 ```
@@ -437,7 +341,7 @@ None
 
 On note en complément de ces informations que le type des différentes données est spécifié. Ainsi, les données numériques sont précisées par l'indication int64 (int signifiant entier). Pour les autres, ce sont des données de type Object pouvant alors prendre la forme de chaîne de caractères (cas des features NOM, TYPE_1 et TYPE_2).
 
-### 7. À la recherche des features manquantes
+### À la recherche des features manquantes
 
 Comme nous venons de le constater, il manque quelques données. En ce qui concerne la feature TYPE_2, cela peut s'expliquer par le fait qu'un Pokémon peut ne pas avoir de type secondaire. Les manques pour cette feature sont donc normaux et acceptables.
 
@@ -448,7 +352,7 @@ La première chose à faire est de trouver l'observation ayant le nom manquant.
 L'instruction ci-dessous permet de rechercher et d'afficher l'observation du Dataframe nosPokemon, ayant la feature NOM non renseignée (isNull) :
 
 ```python
-print(nosPokemons[nosPokemons['NOM'].isnull()])
+print(nosPokemonsClean[nosPokemonsClean['NOM'].isnull()])
 ```
 
 Ce qui nous permet de déterminer qu'il s'agit de l'observation 62 :
@@ -470,8 +374,8 @@ Les Pokémons contenus dans notre fichier sont classés dans l'ordre de ce Poké
 Le Pokémon ayant le numéro d'observation 62 se trouve entre les observations 61 et 63, soit les Pokémons Férosinge et Caninos :
 
 ```python
-print(nosPokemons['NOM'][61])
-print(nosPokemons['NOM'][63])
+print(nosPokemonsClean['NOM'][61])
+print(nosPokemonsClean['NOM'][63])
 ```
 
 ```
@@ -484,7 +388,7 @@ En consultant à présent le Pokédex, on peut en déduire que le nom du Pokémo
 Il ne nous reste plus qu'à renseigner la feature NOM de l'observation n°62 comme suit :
 
 ```python
-nosPokemons['NOM'][62] = "Colossinge"
+nosPokemonsClean['NOM'][62] = "Colossinge"
 ```
 
 Cette modification peut être à l'origine d'un avertissement de type "A value is trying to be set on a copy of a slice from a Dataframe" lors de l'exécution du script. Cet avertissement peut être ignoré.
@@ -492,7 +396,7 @@ Cette modification peut être à l'origine d'un avertissement de type "A value i
 Nous pouvons vérifier la bonne prise en compte de cette modification à l'aide de l'instruction :
 
 ```python
-print(nosPokemons['NOM'][62])
+print(nosPokemonsClean['NOM'][62])
 ```
 
 ```
@@ -511,7 +415,7 @@ Après la modification :
 63,Colossinge,Combat,,65,105,60,60,70,95,1,FAUX
 ```
 
-### 8. Place aux observations des combats
+### Place aux observations des combats
 
 Nous venons d'analyser les observations relatives aux Pokémons. Nous devons à présent nous concentrer sur celles des combats, répertoriées dans le fichier combats.csv en procédant par la même démarche d'analyse :
 
@@ -546,13 +450,13 @@ Voici le résultat de cette analyse :
 • Chaque feature est de type numérique.
 • Il ne manque aucune information.
 
-### 9. Assemblage des observations
+### Assemblage des observations
 
 Nous disposons de deux jeux d'observations. L'un consacré aux caractéristiques des Pokémons, l'autre aux combats. Il nous faut à présent réunir ces informations afin de savoir pour chaque Pokémon le nombre de combats menés ainsi que le nombre de victoires.
 
 Pour avoir cette vision, qui nous permettra de connaître les Pokémons ayant une probabilité de victoire plus importante que les autres, nous devons assembler (agréger) les deux Dataframe Pokedex et Combats.
 
-#### a. Nombre de combats menés
+#### Nombre de combats menés
 
 Avant de réaliser cette agrégation, nous allons réaliser quelques actions sur le Dataframe combats, afin de calculer le nombre de combats menés par chaque Pokémon.
 
@@ -637,7 +541,7 @@ Là encore, ne pas tenir compte des noms de colonnes affichés dans la réponse.
 
 Remarquez la force du module Pandas, qui par un simple + a réussi à agréger l'ensemble des deux tableaux. Si nous avions codé cette fonctionnalité, nous aurions dû parcourir la liste des Pokémon tout en parcourant les deux tableaux de résultats afin de faire la somme du nombre de combats menés en première et seconde position.
 
-#### b. Nombre de combats gagnés
+#### Nombre de combats gagnés
 
 Passons à présent au nombre de combats gagnés par chaque Pokémon. Connaître cette information nous permettra de savoir si certains Pokémons n'ont jamais gagné de combats, ce qui nous permettra déjà de savoir qu'il faudra éviter de les utiliser lors d'un combat :
 
@@ -659,7 +563,7 @@ En agrégeant les deux tableaux que nous venons de constituer, on constate que l
 
 En utilisant la fonction `info()`, nous constatons que nous disposons que de 783 observations. Cela signifie qu'il existe des Pokémons n'ayant jamais gagné ! Charge à présent de les découvrir.
 
-#### c. Agrégation des données avec le Pokédex
+#### Agrégation des données avec le Pokédex
 
 Le moment est maintenant venu d'agréger nos données avec le Pokédex. Cette agrégation va nous permettre d'avoir une vue centralisée des données et de permettre une analyse plus approfondie.
 
@@ -670,10 +574,6 @@ Dans un premier temps, nous allons créer une liste comportant :
 • Le pourcentage de victoires par rapport au nombre de combats menés
 
 ```python
-#On crée une liste à partir d'une extraction pour obtenir la
-#liste des Pokémons, que l'on trie par numéro
-#Cette liste de numéros nous permettra de réaliser l'agrégation
-#des données
 listeAAgreger = combats.groupby('Pokemon_Gagnant').count()
 listeAAgreger.sort_index()
 
@@ -684,7 +584,7 @@ listeAAgreger['NBR_COMBATS'] = nbFoisPremierePosition.Pokemon_Gagnant + nbFoisSe
 listeAAgreger['NBR_VICTOIRES'] = nombreDeVictoires.Premier_Pokemon
 
 #On calcule le pourcentage de victoires
-listeAAgreger['POURCENTAGE_DE_VICTOIRES'] = nombreDeVictoires.Premier_Pokemon/(nbFoisPremierePosition.Pokemon_Gagnant + nbFoisSecondePosition.Pokemon_Gagnant)
+listeAAgreger['POURCENTAGE_DE_VICTOIRES'] = nombreDeVictoires.Premier_Pokemon / (nbFoisPremierePosition.Pokemon_Gagnant + nbFoisSecondePosition.Pokemon_Gagnant)
 
 #On affiche la nouvelle liste
 print(listeAAgreger)
@@ -709,16 +609,10 @@ Une fois le code exécuté, voici la nouvelle liste que nous obtenons :
 Il ne nous reste plus qu'à agréger cette liste avec le Dataframe nosPokemons représentant le Pokédex. Cela se fait à l'aide la fonction `merge()` du Dataframe.
 
 ```python
-nouveauPokedex = nosPokemons.merge(listeAAgreger, left_on='NUMERO', right_index = True, how='left')
-print(nouveauPokedex)
+nouveauPokedex = nosPokemonsClean.merge(listeAAgreger, left_on='NUMERO', right_index = True, how='left')
+print(nouveauPokedex.describe())
 ```
 
 Le résultat de ce code est la création d'un nouveau Dataframe que nous avons nommé `nouveauPokedex`, issu de l'agrégation du Dataframe `nosPokemons` avec la liste `listeAAgreger`.
 
 Cette agrégation fut possible en utilisant comme clé d'agrégation l'index de la liste (right_index=True) lié à la feature Numero du Dataframe nosPokemons.
-
-
-# Partie 2
-
-
-# Partie 3 
