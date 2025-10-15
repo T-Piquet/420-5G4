@@ -45,7 +45,7 @@ On constate que 800 observations ont été renseignées pour la feature NIVEAU_A
 
 ### La moyenne (mean)
 
-Le niveau d'attaque moyen des Pokémons est de 79, c'est-à-dire qu'en dessous de cette moyenne on peut considérer que le Pokémon a un niveau faible, et au-dessus qu'il a un niveau fort, pouvant alors aider à gagner le combat. Nous disposons donc d'une première information intéressante.
+Le niveau d'attaque moyen des Pokémons est de 79, c'est-à-dire qu'en dessous de cette moyenne, on peut considérer que le Pokémon a un niveau faible, et au-dessus qu'il a un niveau fort, pouvant alors aider à gagner le combat. Nous disposons donc d'une première information intéressante.
 
 ### L'écart type (Std pour Standard Deviation)
 

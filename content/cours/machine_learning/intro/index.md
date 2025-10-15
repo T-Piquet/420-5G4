@@ -110,6 +110,18 @@ Bien que les progrès soit spectaculaire ces 5 dernières années, nous somme en
 |**Traitement automatique des langues (NLP)**|Permet de "lire" ou de comprendre ce que quelqu'un dit|
 |**Conversation**|Chats automatisés de service à la clientèle|
 
+Voici quelques réussites de l'intéligence artificielle :
+
+- **Biologie structurale et protéines** : AlphaFold (DeepMind) a révolutionné la prédiction de structure des protéines en 3D, résolvant un problème vieux de 50 ans. Cela a accéléré la recherche sur les maladies et le développement de médicaments de façon spectaculaire.
+- **Découverte de médicaments** : Des réseaux neuronaux identifient des candidats médicaments prometteurs parmi des millions de molécules. L'IA a notamment permis de découvrir un nouvel antibiotique (halicine) efficace contre des bactéries résistantes.
+- **Physique des plasmas et fusion nucléaire** : Des algorithmes de deep reinforcement learning contrôlent les plasmas dans les tokamaks (réacteurs à fusion), maintenant des configurations stables bien plus longtemps qu'auparavant.
+- **Astrophysique** : L'IA détecte des exoplanètes, classe des galaxies, identifie des ondes gravitationnelles dans les données du LIGO, et a même contribué à l'imagerie du trou noir par l'Event Horizon Telescope.
+- **Science des matériaux** : Des modèles prédisent les propriétés de nouveaux matériaux (batteries, supraconducteurs, catalyseurs) sans avoir à les synthétiser physiquement, accélérant considérablement la recherche.
+- **Météorologie et climat** : GraphCast (DeepMind) prédit la météo avec une précision supérieure aux modèles traditionnels tout en étant beaucoup plus rapide. L'IA aide aussi à modéliser les systèmes climatiques complexes.
+- **Mathématiques** : L'IA a aidé à découvrir de nouvelles conjectures en théorie des nœuds et en combinatoire, suggérant des relations que les mathématiciens ont ensuite pu prouver formellement.
+
+Ces applications utilisent principalement des réseaux neuronaux convolutifs, du reinforcement learning, et des architectures spécialisées.
+
 ---
 
 ## Défis de l'intelligence artificielle

@@ -19,7 +19,7 @@ Dans notre cas, nous devons prédire le pourcentage de victoire, c'est donc une 
 • **Les arbres de décisions**
 • **Les forêts aléatoires**
 
-### 1. Découpage des observations en jeu d'apprentissage et jeu de tests
+### Découpage des observations en jeu d'apprentissage et jeu de tests
 
 La première étape avant tout apprentissage est de découper les observations dont nous disposons en un jeu d'apprentissage avec lequel la machine va réaliser son apprentissage et en jeu de tests avec lequel la machine va évaluer son apprentissage. Pour cela, nous allons utiliser le module Scikit-Learn que nous vous invitons à ajouter à votre projet (avec les packages).
 
@@ -122,7 +122,7 @@ X_APPRENTISSAGE, X_VALIDATION, Y_APPRENTISSAGE, Y_VALIDATION = train_test_split(
 
 Notons l'usage de la fonction `iloc` qui permet de sélectionner les features par leur numéro d'index et la valeur 0.2 utilisée dans la fonction `train_test_split` indiquant que nous consacrons 20 % des observations au jeu de tests.
 
-### 2. Algorithme de régression linéaire
+### Algorithme de régression linéaire
 
 Comme nous l'avons vu dans le chapitre Des statistiques pour comprendre les données (encore lui), l'algorithme de régression linéaire modélise les relations entre une variable prédictive et une variable cible.
 
@@ -185,7 +185,7 @@ Ce qui nous permet d'en déduire qu'à l'aide de la régression linéaire multiv
 >> Precision = 0.9043488485570964
 ```
 
-### 3. L'arbre de décision appliqué à la régression
+### L'arbre de décision appliqué à la régression
 
 Passons à présent à l'utilisation des arbres de décisions en faisant attention à bien utiliser l'algorithme destiné aux problèmes de régression : `DecisionTreeRegressor` et non celui destiné aux problèmes de classification : `DecisionTreeClassifier`.
 
@@ -209,7 +209,7 @@ On constate qu'en utilisant l'arbre de décisions le résultat est moins bon…
 >> Precision = 0.8812980947158535
 ```
 
-### 4. La random forest
+### La random forest
 
 Testons à présent l'algorithme des forêts aléatoires (toujours appliqué à la régression) :
 
@@ -235,7 +235,7 @@ Et nous obtenons cette fois-ci une précision de 93 % !
 
 Nous avons donc trouvé notre challenger. Cependant, nous tenons à préciser que les algorithmes sont ici utilisés dans leur forme la plus simple, c'est-à-dire sans optimisation de leurs paramètres. Il se peut qu'en les torturant un peu nous obtenions d'autres résultats, peut-être encore plus prometteurs, avec l'un des trois algorithmes.
 
-### 5. Sauvegarde du modèle d'apprentissage
+### Sauvegarde du modèle d'apprentissage
 
 Afin de pouvoir utiliser le modèle de prédiction fraîchement entraîné dans une application sans devoir réitérer la phase d'apprentissage, nous devons le sauvegarder.
 
