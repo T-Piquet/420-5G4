@@ -1,7 +1,6 @@
 +++
 title = "Apprentissage machine"
 weight = 20
-draft = true
 +++
 
 ### Définition

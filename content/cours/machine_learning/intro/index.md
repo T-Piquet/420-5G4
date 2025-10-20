@@ -1,7 +1,6 @@
 +++
 title = "Intro"
 weight = 10
-draft = true
 +++
 
 ## Quotidien

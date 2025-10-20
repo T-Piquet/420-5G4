@@ -1,7 +1,6 @@
 +++
 title = "Les réseaux de neurones"
 weight = 30
-draft = true
 +++
 
 ## Biologie cognitive

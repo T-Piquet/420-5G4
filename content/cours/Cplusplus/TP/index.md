@@ -1,7 +1,6 @@
 +++
 title = "TP C++"
 weight = 110
-draft = true
 
 [params]
   menuPre = '<i class="fa-solid fa-flask"></i> '
@@ -49,12 +48,12 @@ Ce travail compte pour **20%** de votre session et sera corrigé selon la grille
 
 Il y a une erreur de faite avant le premier commit, et une partie du code a été perdu, le fichier `book.cpp` est incomplet. Servez-vous du fichier d'entête pour le compléter.
 
-### Ajout de nouvelles fonctionnalitées
+### Ajout de nouvelles fonctionnalités
 
-Vous devez ajouter 2 nouvelles fonctionnalitées tirée du backlog du projet : 
+Vous devez ajouter 2 nouvelles fonctionnalités tirée du backlog du projet : 
 - 1 fonctionnalité au choix dans *Interface et Expérience Utilisateur*
 - 1 fonctionnalité au choix dans *Gestion des Données*
-- La fonctionnalité bonus n'est pas obligatoire, mais c'est un défi intéressant. Elle compte pour 10% de plus. Si jamais vous obtenez une note supérieur a 100%, points au dessus de 100 seront reporté pour la note suivante.
+- La fonctionnalité bonus n'est pas obligatoire, mais c'est un défi intéressant. Elle compte pour 10% de plus. Si jamais vous obtenez une note supérieure à 100%, points au-dessus de 100 seront reportés proportionnelement pour la note suivante.
 
 #### Interface et Expérience Utilisateur
 
@@ -74,8 +73,8 @@ Vous devez ajouter 2 nouvelles fonctionnalitées tirée du backlog du projet :
 ### Veille technologique
 Donnez ces explications dans le README.md à la racine du dépôt. Un paragraphe par questions est suffisant.
 
-#### C++
+#### Question 1 : C++
 Expliquez en détails une fonctionnalité / notion dans le code que ne nous avons pas ou peu vu en cours.
 
-#### Options de développement possible
-Proposez une solution plus adaptée pour la gestion de bibliothèque et faisant appel éventuellement à une technologie autre que le C++, et expliquez comment vous interfaceriez ca avec le C++. Pensez au futur de cette bibliothèque à Alexandrie qui pourrait éventuellement imagecontenir des millions de livres.
+#### Question 2 : Options de développement possible
+Proposez une solution plus adaptée pour la gestion de bibliothèque et faisant appel éventuellement à une technologie autre que le C++, et expliquez comment vous interfaceriez ça avec le C++. Pensez au futur de cette bibliothèque à Alexandrie qui pourrait éventuellement contenir des millions de livres.
