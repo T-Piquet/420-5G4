@@ -22,8 +22,6 @@ Il y a un binaire fonctionnel utilisé par les agents de la bibliothèque, mais 
 - Afficher les livres disponibles
 - Sauvegarder l'état de la bibliothèque dans un fichier et recharger au démarrage
 
-> Le travail se fait seul.
-
 ## Évaluation
 
 Ce travail compte pour **20%** de votre session et sera corrigé selon la grille suivante :
@@ -35,6 +33,7 @@ Ce travail compte pour **20%** de votre session et sera corrigé selon la grille
 | Veille technologique | **25%** |
 |**Total**| **100%** |
 
+> Le travail se fait seul.
 
 ## Spécifications détaillées
 
@@ -43,6 +42,11 @@ Ce travail compte pour **20%** de votre session et sera corrigé selon la grille
 - Le code est disponible sur git
 
 [<i class="fa-brands fa-github"></i> Repos Github](https://classroom.github.com/a/c3m8ThN0) classroom du projet
+
+> [!warning] **Remise**
+> Le dernier commit pour la remise doit être fais avant :
+> - **Groupe 1** : Remise le 28/10 23h59
+> - **Groupe 2** : Remise le 27/10 23h59
 
 ### Combler les trous dans le code
 
