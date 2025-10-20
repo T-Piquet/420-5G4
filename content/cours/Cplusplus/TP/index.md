@@ -50,7 +50,12 @@ Ce travail compte pour **20%** de votre session et sera corrigé selon la grille
 
 ### Combler les trous dans le code
 
-Il y a une erreur de faite avant le premier commit, et une partie du code a été perdu, le fichier `book.cpp` est incomplet. Servez-vous du fichier d'entête pour le compléter.
+Il y a une erreur de faite avant le premier commit, et une partie du code a été perdu, le fichier `book.cpp` est manquant. Servez-vous du fichier d'entête pour le compléter.
+
+> [!tip]
+> Pour les fonctions relative à la sauvegarde de fichier, pensez a utiliser les fichiers d'exemple fournis `books.txt`.
+>
+> Vous devrez être capable de lire ce fichiers une fois `books.cpp`complété.
 
 ### Ajout de nouvelles fonctionnalités
 
