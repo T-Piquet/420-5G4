@@ -14,6 +14,8 @@ Vous prenez la suite d'un autre stagiaire dans le département informatique d'un
 Il s'agit de reprendre un logiciel de gestion des usagers et des livres. C'est un code ancien qui a besoin d'un peu de maintenance et de nouvelles fonctionnalités.
 
 Il y a un binaire fonctionnel utilisé par les agents de la bibliothèque, mais le code est incomplet sur le repos.
+Binaire disponnible : [bibliotheque](bibliotheque)
+
 
 **Voici les fonctionnalités principales du binaire** :
 - Ajouter/supprimer des livres de la bibliothèque
@@ -66,7 +68,7 @@ Vous devez ajouter 2 nouvelles fonctionnalités tirée du backlog du projet :
 
 #### Interface et Expérience Utilisateur
 
-- Confirmation avant suppression de livres/utilisateurs.
+- Confirmation avant suppression de livres.
 - numérotation automatique des ID utilisateurs.
 - Validation robuste des entrées (ISBN format, nom utilisateur, etc.)
 - Détection des doublons plus intelligente (même titre, auteur, ISBN).
