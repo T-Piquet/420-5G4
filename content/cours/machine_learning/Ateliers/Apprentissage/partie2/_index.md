@@ -1,7 +1,6 @@
 +++
 title = "Partie 2"
 weight = 120
-draft = true
 +++
 
 

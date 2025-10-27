@@ -1,7 +1,6 @@
 +++
 title = "Analyse d'image"
 weight = 130
-draft = true
 +++
 
 ## Objectifs

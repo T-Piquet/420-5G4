@@ -1,7 +1,6 @@
 +++
 title = "Partie 3"
 weight = 120
-draft = true
 +++
 
 ## Passons à la phase d'apprentissage

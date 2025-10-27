@@ -1,7 +1,6 @@
 +++
 title = "Apprentissage"
 weight = 110
-draft = true
 +++
 
 
