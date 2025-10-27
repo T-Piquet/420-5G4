@@ -21,6 +21,10 @@ Vous devrez remettre les 3 fichiers suivant dans le répertoire `apprentissage/`
 - `partie3_entrainement.ipynb`
 - `partie3_predictions.ipynb`
 
+> [!warning] **Remise**
+> Le dernier commit pour la remise doit être fais avant :
+> - **Groupe 1** : Remise le 13/11 23h59
+> - **Groupe 2** : Remise le 12/11 23h59
 
 ## Source
 

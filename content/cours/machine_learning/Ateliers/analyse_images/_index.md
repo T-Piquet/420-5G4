@@ -13,6 +13,12 @@ Vous devrez remettre les 3 fichiers suivant dans le répertoire `analyse_image/`
 - `classification.ipynb`
 - `test_model.ipynb`
 
+> [!warning] **Remise**
+> Le dernier commit pour la remise doit être fais avant :
+> - **Groupe 1** : Remise le 18/11 23h59
+> - **Groupe 2** : Remise le 17/11 23h59
+
+
 Le texte et l'exemple proviennent du livre :
 Vannieuwenhuyze, Aurélien. Intelligence artificielle vulgarisée, ENI, 2019. 434 p.
 
