@@ -58,14 +58,6 @@ Ainsi, un même jeu de données peut être exploité différemment en fonction d
 
 ---
 
-## Création et configuration d'un nouveau projet Python
-
-Avant d'aller plus loin, nous devons créer un nouveau projet Python.
-
-Pour ce faire, il convient d'ouvrir l'éditeur PyCharm puis dans le menu file, de choisir l'option New Project.
-
-Nous vous laissons le soin de choisir le nom du projet. À titre indicatif, nous l'avons appelé Pokemon.
-
 ### Modules python utilisés
 
 Un module peut être assimilé à une boîte à outils offrant des fonctions complémentaires dans un domaine dédié, nous évitant ainsi de les coder nous-mêmes. Concernant notre sujet, il existe des modules spécialisés dans l'analyse de données et l'intelligence artificielle, c'est donc tout naturellement que nous allons utiliser certains d'entre eux pour notre projet.
@@ -113,7 +105,7 @@ L'étude des données passe notamment par leur description (nom, type…), ainsi
 
 ### De quelles données disposons-nous ?
 
-Les fichiers de données dont nous disposons portent l'extension CSV (Comma Separated Value). C'est-à-dire que les données contenues dans ces fichiers sont séparées par des virgules. Pour vous donner une petite idée du contenu de ces fichiers, vous pouvez les ouvrir à l'aide du logiciel Excel ou via un simple éditeur de texte tel que Notepad ou bien encore directement dans le logiciel PyCharm.
+Les fichiers de données dont nous disposons portent l'extension CSV (Comma Separated Value). C'est-à-dire que les données contenues dans ces fichiers sont séparées par des virgules. Pour vous donner une petite idée du contenu de ces fichiers, vous pouvez les ouvrir à l'aide du logiciel Excel ou via un simple éditeur de texte tel que Notepad ou bien encore directement dans vscode avec csv edit.
 
 Dans notre exemple, les fichiers sont de petite taille, pouvant être ouverts et exploités par des logiciels. Mais dans la plupart des cas liés au Machine Learning, les fichiers contiennent énormément de données, ne pouvant alors plus être exploités par des logiciels traditionnels.
 
@@ -169,8 +161,6 @@ Ce script donnant le résultat suivant, soit au total 12 colonnes :
 Nous connaissons à présent les types de données propres à nos Pokémons, il nous faut à présent visualiser leur contenu.
 
 Pour afficher les dix premières lignes de nos données, nous allons utiliser la fonction Head du Dataframe nosPokemons que nous avons créé.
-
-Il faut également désactiver la limitation du nombre de colonnes affichées dans PyCharm, car par défaut seules 5 colonnes sont présentées et notre jeu de données en comporte 12.
 
 ```python
 print(nosPokemons.head(10))
