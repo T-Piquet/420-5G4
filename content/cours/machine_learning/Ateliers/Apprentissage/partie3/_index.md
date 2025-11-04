@@ -352,7 +352,6 @@ Viennent ensuite le chargement du modèle et la prédiction pour chaque Pokémon
 
 ```python
 modele_prediction = joblib.load('modele/modele_pokemon.mod')
-modele_prediction.predict([[pokemon1[2],pokemon1[3],pokemon1[4],pokemon1[5],pokemon1[6],pokemon1[7],pokemon1[8]]])
 ```
 
 On compare ensuite le pourcentage de victoire prédit pour en déduire le vainqueur du combat.

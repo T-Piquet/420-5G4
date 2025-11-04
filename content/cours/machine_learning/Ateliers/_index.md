@@ -18,7 +18,7 @@ Ces ateliers comptent pour **15%** de votre session.
 - Cet atelier est à faire en python, plus particulièrement avec les [jupyter notebook](https://jupyter.org/). 
 - Toutes les extensions vscode nécessaires sont incluse dans le fichier `devcontainer.json` du repos git.
 
-[<i class="fa-brands fa-github"></i> Repos Github](https://classroom.github.com/a/ZEt7a08t classroom du projet
+[<i class="fa-brands fa-github"></i> Repos Github](https://classroom.github.com/a/ZEt7a08t) classroom du projet
 
 > Le travail se fait seul.
 
