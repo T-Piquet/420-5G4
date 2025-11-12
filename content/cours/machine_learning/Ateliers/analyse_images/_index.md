@@ -9,7 +9,7 @@ Dans ce laboratoire, vous allez entraîner un modèle à la classification d'ima
 
 ## Remise
 
-Vous devrez remettre les 3 fichiers suivant dans le répertoire `analyse_image/` de votre repos git :
+Vous devrez remettre les 2 fichiers suivant dans le répertoire `analyse_image/` de votre repos git :
 - `classification.ipynb`
 - `test_model.ipynb`
 
@@ -258,7 +258,7 @@ Toujours à partir de la documentation, nous pouvons déterminer les différents
 
 À partir de ces informations, nous pouvons donc affirmer que nos images tant attendues sont présentes dans ce fichier sous forme de valeurs par pixel.
 
-Afin de nous en assurer, nous allons essayer d'afficher la première image.
+Afin de nous en assurer, nous allons essayer d'afficher la première image. Pour cela créez le fichier `classification.ipynb` qui va nous servir pour l'entrainement du modèle.
 
 ```python
 import pandas as pnd
@@ -677,7 +677,7 @@ Vous pouvez sauvegarder ce modèle pour l'utiliser dans la partie suivante.
 
 Nous allons à présent utiliser le dernier modèle avec de nouvelles images.
 
-Nous vous invitons à créer un nouveau fichier Python que l'on nommera `classification.ipynb`.
+Nous vous invitons à créer un nouveau fichier Python que l'on nommera `test_model.ipynb`.
 
 La première étape va être de charger le modèle comme suit (changer le nom du modèle si vous avez fais la partie précédente) :
 
