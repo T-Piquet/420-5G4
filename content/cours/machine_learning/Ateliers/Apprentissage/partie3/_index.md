@@ -276,7 +276,7 @@ Plus nous réalisons d'itérations, plus l'algorithme apprend et moins il se tro
 
 Nous disposons d'un modèle d'apprentissage capable de nous prédire le pourcentage de victoire de chaque Pokémon. Nous allons à présent créer une application utilisant ce modèle d'apprentissage et ayant pour objectif de prédire le vainqueur d'un combat opposant deux Pokémons choisis dans le Pokédex.
 
-La première étape consiste à créer un nouveau fichier Python dans notre projet que l'on nommera `quiSeraLeVainqueur.py`.
+La première étape consiste à créer un nouveau fichier Python dans notre projet que l'on nommera `partie3_predictions.ipynb`.
 
 Dans ce fichier, nous allons tout d'abord importer les modules dont nous avons besoin.
 

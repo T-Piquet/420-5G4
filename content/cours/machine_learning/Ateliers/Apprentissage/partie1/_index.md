@@ -416,7 +416,7 @@ Nous venons d'analyser les observations relatives aux Pokémons. Nous devons à 
 
 ```python
 #Chargement des données des combats
-combats = pnd.read_csv("datas/combats.csv")
+combats = pd.read_csv("datas/combats.csv")
 
 #Affichage des colonnes du Dataframe
 print(combats.columns.values)
@@ -449,7 +449,7 @@ Pour avoir cette vision, qui nous permettra de connaître les Pokémons ayant un
 
 Avant de réaliser cette agrégation, nous allons réaliser quelques actions sur le Dataframe combats, afin de calculer le nombre de combats menés par chaque Pokémon.
 
-Lors d'un combat, le Pokémon peut être utilisé en première position ou en seconde position :
+Lors d'un combat, le Pokémon peut être utilisé en première position ou en seconde position. Cette position à une importance car elle permet de savoir qui va donner le premier coup. Dans le cas où notre pokemon à peu de points de vie, s'il joue en seconde position, on risque de perdre avant de donner notre premier coup.
 
 | COMBAT | PREMIER POKEMON | SECOND POKEMON |
 |---------|-----------------|----------------|

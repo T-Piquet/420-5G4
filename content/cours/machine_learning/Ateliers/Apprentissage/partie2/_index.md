@@ -87,7 +87,7 @@ Certains Pokémons n'ont qu'un point de vie ! Ce sont les Pokémons que nous dev
 
 25 % des Pokémons ont une vitesse supérieure à 90 (dernier quartile). Être rapide lors d'un combat peut être un avantage !
 
-On constate un écart type de 11 pour la feature Combat. Cet écart type est le plus bas de l'ensemble des données. Cela signifie que les Pokémons ont tous réalisé un nombre de combats proche de la moyenne, c'est-à-dire proche de 127.
+On constate un écart type de 11 pour la feature nombre de combats. Cet écart type est le plus bas de l'ensemble des données. Cela signifie que les Pokémons ont tous réalisé un nombre de combats proche de la moyenne, c'est-à-dire proche de 127.
 
 Cette valeur nous permet de dire que les observations contenues dans le jeu de données sont assez qualitatives, car il n'y a pas de Pokémon ayant davantage combattu par rapport aux autres, ce qui ne nous permettrait pas d'avoir un jeu d'apprentissage reflétant la réalité.
 
