@@ -1,6 +1,13 @@
 +++
-title = "Sujet A"
+title = "Hiérarchie mémoire"
 weight = 1
+[params]
+  author = 'Thomas Piquet'
 +++
 
-Description du projet et de l'equipe.
+> [!info] 
+> Description du projet et de l'equipe.
+
+## La hiérarchie mémoire dans les microprocesseur généraliste.
+
+Par Thomas Piquet.

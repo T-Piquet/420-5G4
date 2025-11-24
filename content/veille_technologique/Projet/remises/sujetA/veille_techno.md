@@ -1,6 +1,6 @@
 +++
 title = "Veille technologique"
-weight = 3
+weight = 1
 +++
 
 Les actions entreprises pour votre veille technologique.

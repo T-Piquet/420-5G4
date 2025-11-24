@@ -34,3 +34,4 @@ Vous aurez un serveur web de test disponible à l'adresse http://127.0.0.1:1313
 
 > [!TIP]
 > Le script `start_hugo.sh` peut vous servir d'inspiration si vous souhaitez exécuter votre container manuellement (hors de vscode).
+> L'image du script à été construite avec `docker build -t hugo_relearn .`
