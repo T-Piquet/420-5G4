@@ -30,7 +30,10 @@ Ce travail compte pour **40%** de votre session et sera corrigé selon la grille
 ## Étapes de remise
 
 - **Validation du sujet** : après validation avec votre professeur, au plus tard 28/11 sur [moodle](https://cmontmorency.moodle.decclic.qc.ca/mod/feedback/view.php?id=482751).
-- **Démonstration** : 8/12 9/12 (possibilité de l'avancée au 1/12 et 2/12 si le projet est remis ou quasi terminé)
+- **Démonstration** : 8/12 9/12 (possibilité de l'avancée au 1/12 et 2/12 si le projet est remis ou quasi terminé). 
+
+  *Assurez vous d'avoir une version fonctionnel du site pour me montrer pendant la démonstration, même si vous n'avez pas encore terminé votre contribution.*
+- **Remise finale** : vous devez faire votre `pull request` au plus tard le **12/12/25 23:59** pour les 2 groupes.
 
 ---
 
