@@ -1,7 +1,7 @@
 +++
 archetype = "chapter"
 title = "Veille technologique"
-weight = 3
+weight = 400
 
 [params]
   menuPre = '<i class="fa-solid fa-gears"></i> '

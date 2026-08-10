@@ -1,6 +1,7 @@
 +++
 title = "Projet"
-weight = 1
+weight = 10
+
 [params]
   menuPre = '<i class="fa-solid fa-diagram-project"></i> '
 +++
