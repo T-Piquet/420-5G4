@@ -2,18 +2,15 @@
 title = "Git"
 weight = 20
 +++
-
-Voici un ensemble de lien qui vous permettrons de résoudre les problèmes courant que vous pourrez rencontrer avec git.
-
-
-| Technique | | liens |
-| --- | --- | --- |
-| **Gestion des branches** | ![alt text](branches.png) | https://www.atlassian.com/git/tutorials/using-branches |
-| **Sauvegarde temporaire des changements** | ![alt text](stash.png)| https://www.atlassian.com/git/tutorials/saving-changes/git-stash|
-| **Défaire les erreurs** | ![alt text](reset.png) | https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting|
-| **Intégrer les changements** | ![alt text](merging.png) | https://www.atlassian.com/git/tutorials/merging-vs-rebasing |
-
 ## Bien écrire un message de commit
+
+Avant d'écrire le message, il faut choisir quoi mettre dans son commit.
+
+> [!tip] Conseils
+> **Un commit = Une tâche** : Ne mélangez pas une correction de bug et une nouvelle fonctionnalité dans le même commit.
+>
+> **Fréquence** : Commitez souvent. Il est plus facile de revenir en arrière sur un petit changement précis que sur une journée entière de travail.
+> **Ne faite un commit seulement quand votre programme compile**.
 
 Voici la forme typique d'un nessage de commit:
 
@@ -26,25 +23,18 @@ On explique ici le quoi et le pourquoi du commit.
 Peut s'étendre sur autant de lignes que nécessaire.
 ```
 
-<!-- Le **Type** indique quelle sorte de changement tu as effectué :
-- **feat** : Une nouvelle fonctionnalité.
-- **fix** : Une correction de bug.
-- **docs** : Changements dans la documentation.
-- **style** : Modifications esthétiques (espaces, formatage, point-virgule manquant) sans changement de code.
-- **refactor** : Modification du code qui ne corrige pas de bug et n'ajoute pas de fonction.
-- **test** : Ajout ou modification de tests.
-- **chore** : Mise à jour de tâches de build, configuration d'outils, etc. -->
-
 Voici les différents types de commit que vous utiliserez durant votre session : 
 
 | Type de commit | Description |
 |---|---|
-| **[CRÉATION]** | Début d’un projet ou ajout d’une nouvelle composante majeure|
-| **[INTERFACE]** | Ajout ou modification d’éléments visuels (boutons, labels, couleurs, etc.) |
-| **[ÉVÉNEMENT]** | Programmation d’un événement ou d’une action sur un contrôle | 
-| **[DÉBOGAGE]** | Correction de bogues, amélioration ou modification d’un code existant |
-| **[TEST]** | Ajout ou mise à jour de tests unitaires ou instrumentés |
-| **[SAUVEGARDE]** | Sauvegarde intermédiaire entre le travail en classe et à la maison |
+| **[FEAT]**     | Une nouvelle fonctionnalité. |
+| **[FIX]**      | Une correction de bug. |
+| **[DOCS]**     | Changements dans la documentation. |
+| **[STYLE]**    | Modifications esthétiques (espaces, formatage, point-virgule manquant) sans changement de code. |
+| **[REFACTOR]** | Modification du code qui ne corrige pas de bug et n'ajoute pas de fonction. |
+| **[TEST]**     | Ajout ou modification de tests. |
+| **[TACHE]**    | Mise à jour de tâches de build, configuration d'outils, etc. |
+| **[SAUVEGARDE]** | Sauvegarde intermédiaire entre le travail en classe et à la maison. **Même si la fcontionnalitée n'est pas complète, le programme doit compiler.** |
 | **[REMISE]** | Dernier commit avant la remise du projet |
 
 **[FAIT]** n'est pas un type de commit, il n'y a aucune information dans ce message.
@@ -53,16 +43,23 @@ Voici les différents types de commit que vous utiliserez durant votre session :
 
 Exemple de message de commit:
 ```
-[INTERFACE] ajouter un mode sombre à l'interface utilisateur
+[FEAT] ajouter un mode sombre à l'interface utilisateur
 
 Le mode sombre peut être activé via les paramètres du profil. 
 Cette modification inclut l'ajout de variables CSS pour les couleurs de fond et de texte.
 ```
 
-> [!tip] Conseils
-> **Un commit = Une tâche** : Ne mélangez pas une correction de bug et une nouvelle fonctionnalité dans le même commit.
->
-> **Fréquence** : Commitez souvent. Il est plus facile de revenir en arrière sur un petit changement précis que sur une journée entière de travail.
+## Utilisation générale de git
+
+Voici un ensemble de lien qui vous permettrons de résoudre les problèmes courant que vous pourrez rencontrer avec git.
+
+| Technique | | liens |
+| --- | --- | --- |
+| **Gestion des branches** | ![alt text](branches.png) | https://www.atlassian.com/git/tutorials/using-branches |
+| **Sauvegarde temporaire des changements** | ![alt text](stash.png)| https://www.atlassian.com/git/tutorials/saving-changes/git-stash|
+| **Défaire les erreurs** | ![alt text](reset.png) | https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting|
+| **Intégrer les changements** | ![alt text](merging.png) | https://www.atlassian.com/git/tutorials/merging-vs-rebasing |
+
 
 
 ## Cheat Sheet
