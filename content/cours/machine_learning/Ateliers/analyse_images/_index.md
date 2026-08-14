@@ -1,6 +1,6 @@
 +++
 title = "Analyse d'image"
-weight = 130
+weight = 20
 +++
 
 ## Objectifs

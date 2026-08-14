@@ -1,13 +1,13 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://coursinfo.ca/420-5G4/'
 languageCode = 'fr'
-title = '420-5G4-A25'
+title = '420-5G4-A26'
 theme = "hugo-theme-relearn"
 # For search functionality
 [outputs]
 home = [ "HTML", "RSS", "SEARCH"]
 
 [params]
-  themeVariant = ["zen-dark", "zen-light"]
+  themeVariant = ["zen-light", "zen-dark"]
   collapsibleMenu = true
 
 # Hide the Home entry.
