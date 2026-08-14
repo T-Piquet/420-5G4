@@ -5,6 +5,9 @@ weight: 1
 
 ## Procedure d'installation de Linux Mint
 
+On vous recommande d'utiliser linux Mint pour ce cours, de préférence avec le gestionnaire de fenêtre cinnamon. Vous trouverez l'iso [ici](https://www.linuxmint.com/edition.php?id=326). 
+
+{{% expand title="**Détails avec capture d'écran**" %}} 
 1. Sélectionner `Start Linux Mint`
 
 ![alt text](image.png)
@@ -41,22 +44,28 @@ weight: 1
 
 12. **L’environnement est installé, il faut le mettre à jour.** 
 
+{{% /expand %}} 
+
 ## Mise à jour de l'environement
 
-### Première méthode :
 
 Ouvrir le terminal.
 ![alt text](image-11.png)
 
 Ecrire les commandes suivantes :
-1. sudo apt update
+1. `sudo apt update`
 1. Si proposer : `O/n`, faire `Entrée`
-1. Sudo apt upgrade
+1. `Sudo apt upgrade`
 1. Si proposer : `O/n`, faire `Entrée`
 
-### Seconde méthode :
+
+{{% expand title="**alternative graphique :**" %}} 
+
+> [!warning] Attention
+> Ne pas mettre à jour vers un miroir local, votre linux ne pourra plus se mettre à jour au cegep.
+
+
 En utilisant l'outil intégré de Mint en bas a droite de votre écran :
-
 ![alt text](image-12.png)
 
 1. Cliquez dessus :
@@ -78,6 +87,7 @@ En utilisant l'outil intégré de Mint en bas a droite de votre écran :
 Et maintenant votre systeme est à jour prêt pour la suite.
 
 ![alt text](image-17.png)
+{{% /expand %}} 
 
 **Installation terminée !**
 
