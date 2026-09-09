@@ -1,0 +1,331 @@
+<div class="selection-sort-widget">
+  <!-- Barres d'action et de contrôle -->
+  <div class="widget-controls">
+    <div class="btn-group">
+      <button id="btn-play-pause" class="btn btn-primary">▶ Lecture</button>
+      <button id="btn-step" class="btn btn-secondary">⏭ Pas à pas</button>
+      <button id="btn-reset" class="btn btn-secondary">↺ Réinitialiser</button>
+      <button id="btn-random" class="btn btn-outline">🔀 Réorganiser</button>
+    </div>
+
+    <div class="speed-control">
+      <label for="speed-range">Vitesse :</label>
+      <input type="range" id="speed-range" min="100" max="1500" value="600" step="50">
+    </div>
+  </div>
+
+  <!-- Zone d'affichage des barres -->
+  <div class="array-viewport">
+    <div id="bars-container" class="bars-container"></div>
+  </div>
+
+  <!-- Légende des couleurs -->
+  <div class="legend-bar">
+    <span class="legend-item"><span class="color-box unsorted"></span> Non trié</span>
+    <span class="legend-item"><span class="color-box current"></span> En comparaison ($j$)</span>
+    <span class="legend-item"><span class="color-box min"></span> Minimum temporaire ($min\_idx$)</span>
+    <span class="legend-item"><span class="color-box sorted"></span> Zone triée</span>
+  </div>
+
+  <!-- Panneau de statistiques et messages explicatifs -->
+  <div class="stats-panel">
+    <div id="status-message" class="status-message">Cliquez sur **Lecture** ou **Pas à pas** pour démarrer.</div>
+    <div class="metrics">
+      <span>Comparaisons : <strong id="metric-comparisons">0</strong></span>
+      <span>Échanges : <strong id="metric-swaps">0</strong></span>
+      <span>Passe actuelle : <strong id="metric-pass">0 / 0</strong></span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .selection-sort-widget {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 20px 0;
+  }
+
+  .widget-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+  .btn:active { transform: scale(0.97); }
+  .btn-primary { background: #2563eb; color: #ffffff; }
+  .btn-primary:hover { background: #1d4ed8; }
+  .btn-secondary { background: #f1f5f9; color: #334155; border-color: #cbd5e1; }
+  .btn-secondary:hover { background: #e2e8f0; }
+  .btn-outline { background: transparent; color: #475569; border-color: #cbd5e1; }
+  .btn-outline:hover { background: #f8fafc; }
+
+  .speed-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #475569;
+  }
+
+  .array-viewport {
+    height: 220px;
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    padding: 20px 10px 10px 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .bars-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+    flex: 1;
+    max-width: 42px;
+  }
+
+  .bar-value {
+    font-size: 12px;
+    font-weight: bold;
+    color: #334155;
+    margin-bottom: 4px;
+  }
+
+  .bar-element {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    background-color: #3b82f6; /* Bleue par défaut */
+    transition: height 0.3s ease, background-color 0.2s ease;
+  }
+
+  /* Couleurs d'état des barres */
+  .bar-element.sorted { background-color: #22c55e; }      /* Vert */
+  .bar-element.comparing { background-color: #eab308; }   /* Jaune */
+  .bar-element.min { background-color: #ef4444; }         /* Rouge */
+
+  .legend-bar {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 14px;
+  }
+
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .color-box { width: 12px; height: 12px; border-radius: 3px; }
+  .color-box.unsorted { background: #3b82f6; }
+  .color-box.current { background: #eab308; }
+  .color-box.min { background: #ef4444; }
+  .color-box.sorted { background: #22c55e; }
+
+  .stats-panel {
+    background: #f1f5f9;
+    border-radius: 6px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+  }
+
+  .status-message {
+    font-weight: 600;
+    color: #1e293b;
+  }
+
+  .metrics {
+    display: flex;
+    gap: 18px;
+    color: #64748b;
+    font-size: 12px;
+  }
+</style>
+
+<script>
+(function() {
+  const initialArray = [64, 25, 12, 22, 11, 38, 5, 47];
+  let arr = [...initialArray];
+  
+  let i = 0;
+  let j = 1;
+  let minIdx = 0;
+  let comparisons = 0;
+  let swaps = 0;
+  let isPlaying = false;
+  let timerId = null;
+  let state = 'SCAN'; // 'SCAN' ou 'SWAP'
+
+  const container = document.getElementById('bars-container');
+  const statusEl = document.getElementById('status-message');
+  const compEl = document.getElementById('metric-comparisons');
+  const swapEl = document.getElementById('metric-swaps');
+  const passEl = document.getElementById('metric-pass');
+  const btnPlay = document.getElementById('btn-play-pause');
+
+  function render() {
+    container.innerHTML = '';
+    const maxVal = Math.max(...arr, 1);
+
+    arr.forEach((val, idx) => {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'bar-wrapper';
+
+      const valLabel = document.createElement('span');
+      valLabel.className = 'bar-value';
+      valLabel.innerText = val;
+
+      const bar = document.createElement('div');
+      bar.className = 'bar-element';
+      bar.style.height = `${(val / maxVal) * 100}%`;
+
+      // Application des classes visuelles selon l'état du tri
+      if (idx < i) {
+        bar.classList.add('sorted');
+      } else if (idx === minIdx && (state === 'SCAN' || state === 'SWAP')) {
+        bar.classList.add('min');
+      } else if (idx === j && state === 'SCAN' && i < arr.length - 1) {
+        bar.classList.add('comparing');
+      }
+
+      wrapper.appendChild(valLabel);
+      wrapper.appendChild(bar);
+      container.appendChild(wrapper);
+    });
+
+    compEl.innerText = comparisons;
+    swapEl.innerText = swaps;
+    passEl.innerText = `${Math.min(i + 1, arr.length - 1)} / ${arr.length - 1}`;
+  }
+
+  function step() {
+    if (i >= arr.length - 1) {
+      i = arr.length;
+      state = 'DONE';
+      statusEl.innerText = "🎉 Tri terminé ! Le tableau est entièrement ordonné.";
+      render();
+      pause();
+      return;
+    }
+
+    if (state === 'SCAN') {
+      if (j < arr.length) {
+        comparisons++;
+        statusEl.innerText = `Comparaison : est-ce que ${arr[j]} < ${arr[minIdx]} (actuel minimum) ?`;
+        if (arr[j] < arr[minIdx]) {
+          minIdx = j;
+          statusEl.innerText += ` Oui ! Nouveau minimum trouvé à l'indice ${minIdx}.`;
+        }
+        render();
+        j++;
+      } else {
+        state = 'SWAP';
+        step(); // Passer directement à l'étape d'échange
+      }
+    } else if (state === 'SWAP') {
+      if (minIdx !== i) {
+        swaps++;
+        statusEl.innerText = `Échange du minimum trouvé (${arr[minIdx]}) avec l'élément en position ${i} (${arr[i]}).`;
+        let temp = arr[i];
+        arr[i] = arr[minIdx];
+        arr[minIdx] = temp;
+      } else {
+        statusEl.innerText = `L'élément ${arr[i]} était déjà le plus petit. Aucun échange requis.`;
+      }
+
+      render();
+      i++;
+      j = i + 1;
+      minIdx = i;
+      state = 'SCAN';
+    }
+  }
+
+  function play() {
+    isPlaying = true;
+    btnPlay.innerText = '⏸ Pause';
+    btnPlay.classList.replace('btn-primary', 'btn-secondary');
+    
+    const getDelay = () => 1600 - parseInt(document.getElementById('speed-range').value, 10);
+    
+    function loop() {
+      if (!isPlaying) return;
+      step();
+      if (state !== 'DONE') {
+        timerId = setTimeout(loop, getDelay());
+      }
+    }
+    loop();
+  }
+
+  function pause() {
+    isPlaying = false;
+    clearTimeout(timerId);
+    btnPlay.innerText = '▶ Lecture';
+    btnPlay.classList.replace('btn-secondary', 'btn-primary');
+  }
+
+  function reset(newArr = null) {
+    pause();
+    arr = newArr ? [...newArr] : [...initialArray];
+    i = 0;
+    j = 1;
+    minIdx = 0;
+    comparisons = 0;
+    swaps = 0;
+    state = 'SCAN';
+    statusEl.innerText = "Réinitialisé. Cliquez sur Lecture ou Pas à pas.";
+    render();
+  }
+
+  function generateRandomArray() {
+    const randomArr = Array.from({length: 8}, () => Math.floor(Math.random() * 85) + 5);
+    reset(randomArr);
+  }
+
+  // Événements
+  btnPlay.addEventListener('click', () => isPlaying ? pause() : play());
+  document.getElementById('btn-step').addEventListener('click', () => { pause(); step(); });
+  document.getElementById('btn-reset').addEventListener('click', () => reset());
+  document.getElementById('btn-random').addEventListener('click', generateRandomArray);
+
+  render();
+})();
+</script>

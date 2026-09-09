@@ -45,10 +45,10 @@ disableInlineCopyToClipBoard = true
         [markup.goldmark.extensions.extras.superscript]
           enable = false
       [markup.goldmark.extensions.passthrough]
-        enable = false
+        enable = true
         [markup.goldmark.extensions.passthrough.delimiters]
-          block = []
-          inline = []
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
       [markup.goldmark.extensions.typographer]
         apostrophe = '&rsquo;'
         disable = false
