@@ -11,7 +11,9 @@ weight = 100
 >
 > - Quand on parle de `Données`, on signifie des valeurs codées en dur dans le fichier `.cpp`.
 
-## Q1.
+## Introduction
+
+### Q1.
 **Écrivez un programme pour trouver le plus grand parmi 3 nombres.**
 
 Dans ce problème, vous recevez 3 nombres, et vous devez déterminer lequel est le plus grand.
@@ -22,7 +24,7 @@ Entrée utilisateur : a = 10, b = 21 et c = 4
 Sortie : b est le plus grand.
 ```
 
-## Q2.
+### Q2.
 **Convertisseur de température**
 Créez un programme qui propose à l'utilisateur de convertir une température soit de Celsius vers Fahrenheit, soit de Fahrenheit vers Celsius.
 Formule de conversion :
@@ -40,7 +42,7 @@ Entrez la température en Celsius : 25
 25°C = 77°F
 ```
 
-## Q3.
+### Q3.
 **Écrivez un programme pour afficher la valeur ASCII d'un caractère.**
 
 En C++, chaque caractère a une valeur ASCII associée. Dans ce problème, nous devons afficher la valeur ASCII du caractère dans la console.
@@ -50,7 +52,7 @@ Entrée utilisateur : Caractère = A
 Sortie : Valeur ASCII de 'A' = 65
 ```
 
-## Q4.
+### Q4.
 **Écrivez un programme pour vérifier si un nombre est un palindrome ou non.**
 
 Un nombre palindrome est un nombre qui est égal à lui-même même après avoir inversé ses chiffres. Dans ce programme, nous devons vérifier les nombres palindromes.
@@ -60,7 +62,7 @@ Entrée utilisateur : Nombre à vérifier = 1231
 Sortie : 1231 n'est pas un nombre palindrome.
 ```
 
-## Q5.
+### Q5.
 **Écrivez un programme pour vérifier si deux tableaux sont égaux ou non.**
 
 Un tableau est dit égal si les éléments à l'index donné sont égaux dans les deux tableaux. Dans ce programme, vous devez prendre deux tableaux, puis vérifier si les deux tableaux sont égaux.
@@ -72,7 +74,7 @@ arr2[] = {5, 8, 11, 2}
 Sortie : arr1[] et arr2[] ne sont pas égaux.
 ```
 
-## Q6.
+### Q6.
 
 **Écrivez un programme pour inverser un tableau.**
 
@@ -83,7 +85,7 @@ Dans ce problème, vous devez inverser l'ordre des éléments dans un tableau sa
 - Donnée : arr[] = {1, 2, 3, 4, 5}
 - Sortie : Tableau inversé : {5, 4, 3, 2, 1}
 
-## Q7.
+### Q7.
 
 **Écrivez un programme pour compter les voyelles et les consonnes dans une chaîne.**
 
@@ -94,7 +96,7 @@ Dans ce programme, vous devez compter le nombre de voyelles (a, e, i, o, u) et d
 - Entrée utilisateur : str = "Hello World"
 - Sortie : Voyelles: 3, Consonnes: 7
 
-## Q8.
+### Q8.
 **Écrivez un programme pour rechercher un élément dans un tableau (Recherche linéaire).**
 
 Dans ce programme, vous devez rechercher l'élément donné dans un tableau. Si l'élément est trouvé, vous afficherez l'index de l'élément. Le tableau n'est pas trié.
@@ -107,7 +109,7 @@ arr[] = {10, 11, 7, 8, 2, 9};
 Sortie : 19 non trouvé dans arr[]
 ```
 
-## Q9.
+### Q9.
 **Écrivez un programme pour afficher le tableau après qu'il soit pivoté 
 vers la droite K fois.**
 
@@ -120,14 +122,14 @@ K = 3
 Sortie : Tableau après rotation : {33, 5, 1, 10, 11, 7}
 ```
 
-## Q9 bis
+### Q9 bis
 **Ecrivez une bibliothèque cpp**
 Reprennez les exercices 5 6 8 et 9 pour créer une bibliothèque de traitement de tableaux d'entier. Vous devrez avoir 3 fichiers :
 - libTableau.h
 - libTableau.cpp
 - main.cpp qui fait au moins un appel a chacune des fonctions de la lib.
 
-## Q10.
+### Q10.
 
 **Écrivez un programme pour supprimer les doublons d'un tableau trié.**
 
@@ -139,7 +141,7 @@ Dans ce problème, vous devez supprimer tous les éléments dupliqués d'un tabl
 - Sortie : Tableau sans doublons : {1, 2, 3, 4, 5}, Nouvelle taille : 5
 
 
-## Q11.
+### Q11.
 **Écrivez un programme pour convertir une chaîne en entier.**
 
 Vous devez créer un programme pour convertir le nombre sous forme de chaîne en forme d'entier. Mais dans ce programme, au lieu du binaire, vous devez travailler avec un système de numération décimale.
@@ -150,7 +152,7 @@ Entrée utilisateur : str = "69420"
 Sortie : Nombre = 69420
 ```
 
-## Q12.
+### Q12.
 **Écrivez un programme pour diviser une chaîne en plusieurs sous-chaînes.**
 
 Dans ce problème, vous écrirez un programme pour diviser la chaîne donnée en sous-chaînes basées sur un délimiteur. Cela s'appelle aussi la tokenisation. Vous écrirez une fonction qui retourne un tableau de chaines de caractères.
@@ -167,7 +169,7 @@ GeeksforGeeks
 portal.
 ```
 
-## Q13.
+### Q13.
 **Écrivez un programme pour créer une calculatrice simple.**
 
 Dans ce problème, vous devez créer un programme qui peut effectuer l'addition, la soustraction, la multiplication et la division sur deux nombres saisis par l'utilisateur. Le type d'opération arithmétique peut également être sélectionné par l'utilisateur.
@@ -183,7 +185,7 @@ d pour division.
 Sortie : 250
 ```
 
-## Q14.
+### Q14.
 **Écrivez un programme pour afficher un motif de pyramide complète simple.**
 
 Dans ce problème, vous devez afficher le motif de pyramide simple montré ci-dessous :
@@ -196,7 +198,7 @@ Sortie :
 ***** 
 ```
 
-## Q15.
+### Q15.
 **Écrivez un programme pour additionner deux nombres complexes.**
 
 Dans ce problème, vous devez créer un type de données de nombre complexe (classe dans un fichier séparé, avec fichier d'entête) et créer une méthode pour additionner les deux nombres complexes.
@@ -209,7 +211,7 @@ num2 = 5 + 11i
 Sortie : 7 + 14i
 ```
 
-## Q16.
+### Q16.
 
 **Écrivez un programme pour fusionner deux tableaux triés.**
 
@@ -221,3 +223,76 @@ Dans ce problème, vous devez fusionner deux tableaux triés en un seul tableau 
     - arr1[] = {1, 3, 5, 7}
     - arr2[] = {2, 4, 6, 8}
 - Sortie : Tableau fusionné : {1, 2, 3, 4, 5, 6, 7, 8}
+
+---
+
+## Pointeurs et allocation mémoire
+
+### Q1.
+
+**Objectif :** Déclarer un pointeur, lire une valeur et modifier la variable pointée.
+
+* Déclarez un entier `a = 42`.
+* Déclarez un pointeur `p` qui pointe sur `a`.
+* Affichez l'adresse de `a` et la valeur de `a` en passant par `p`.
+* Modifiez la valeur de `a` à `100` **uniquement** en utilisant le pointeur `p`.
+* Affichez à nouveau `a` pour vérifier la modification.
+
+## Q2.
+**Échange de deux valeurs (Passage par pointeur)**
+
+**Objectif :** Écrire une fonction qui simule un passage par référence via des pointeurs.
+
+* Écrivez une fonction `void echange(int* p1, int* p2)` qui permute les valeurs contenues aux adresses pointées par `p1` et `p2`.
+* Dans le `main`, instanciez deux variables `x = 5` et `y = 10`.
+* Appelez la fonction `echange` et vérifiez que `x` vaut `10` et `y` vaut `5`.
+
+## Q3.
+**Arithmétique de pointeurs élémentaire**
+
+**Objectif :** Parcourir un tableau statique sans utiliser les crochets `[]`.
+
+* Déclarez un tableau statique `int tab[5] = {10, 20, 30, 40, 50};`.
+* Déclarez un pointeur `ptr` pointant sur le premier élément du tableau.
+* À l'aide d'une boucle `for` et de l'arithmétique de pointeurs (`*(ptr + i)` ou `ptr++`), affichez tous les éléments du tableau ainsi que leur adresse mémoire.
+
+## Q4.
+**Somme et Maximum d'un tableau**
+
+**Objectif :** Transmettre un tableau à une fonction via un pointeur.
+
+* Écrivez une fonction `void calculerStats(const int* tab, int taille, int* pSomme, int* pMax)`.
+* La fonction doit calculer la somme et le maximum des éléments du tableau et écrire directement les résultats dans les adresses fournies par `pSomme` et `pMax`.
+* Testez cette fonction dans le `main` avec un tableau d'entiers fixe.
+
+## Q5.
+**Inversion de tableau sur place**
+
+**Objectif :** Manipuler deux pointeurs sur un même tableau.
+
+* Écrivez une fonction `void inverserTableau(int* debut, int taille)`.
+* Utilisez deux pointeurs : l'un pointant au début du tableau (`debut`), l'autre pointant sur le dernier élément (`fin = debut + taille - 1`).
+* À l'aide d'une boucle `while (debut < fin)`, échangez les valeurs et faites avancer/reculer les deux pointeurs.
+
+## Q6.
+**Longueur d'une chaîne de caractères C (`char*`)**
+
+**Objectif :** Manipuler les pointeurs avec des caractères (terminateur `\0`).
+
+* Écrivez votre propre fonction `int maLongueur(const char* str)` (équivalent de `strlen`).
+* Ne stockez aucun indice entier : utilisez un pointeur courant qui s'incrémente jusqu'à rencontrer le caractère nul `'\0'`, puis calculez la différence d'adresses ou un compteur d'itérations.
+
+## Q7.
+**Redimensionnement manuel d'un tableau**
+
+**Objectif :** Comprendre le fonctionnement interne d'un tableau dynamique lors d'un agrandissement.
+
+* Écrivez une fonction `int* redimensionner(int* ancienTab, int ancienneTaille, int nouvelleTaille)`.
+* La fonction doit :
+1. Allouer un nouveau tableau de taille `nouvelleTaille`.
+2. Copier les éléments de l'ancien tableau vers le nouveau.
+3. Libérer l'ancien tableau avec `delete[]`.
+4. Retourner le pointeur vers le nouveau tableau.
+
+
+* Testez la fonction en doublant la taille d'un tableau existant.
