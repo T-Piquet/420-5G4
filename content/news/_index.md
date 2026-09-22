@@ -14,6 +14,7 @@ weight= 40
 > - Communiqué de [open ai](https://openai.com/index/model-disproves-discrete-geometry-conjecture/)
 >
 > - Avis de [Terrence Tao](https://the-decoder.com/terence-tao-says-gpt-5-2-pro-cracked-an-erdos-problem-but-warns-the-win-says-more-about-speed-than-difficulty/) (récipiendaire de la médaille Fields)
+> - Les équations de Navier-Stokes, [le cas d'openai qui volent le travail de mathématiciens](https://cybernews.com/ai-news/openai-navier-stokes-theft-accusations/)
 
 ---
 ### Le hack de open ssh (2024)
