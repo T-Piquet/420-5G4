@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 280" style="background: #0f172a; border-radius: 12px; font-family: system-ui, -apple-system, sans-serif;">
+  <text x="425" y="30" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="700">Différence d'approche : Machine Learning vs Deep Learning</text>
+
+  <!-- Top: Traditional ML -->
+  <g transform="translate(30, 55)">
+    <text x="0" y="35" fill="#38bdf8" font-size="14" font-weight="600">ML Classique</text>
+    
+    <!-- Input -->
+    <rect x="110" y="10" width="80" height="45" rx="6" fill="#1e293b" stroke="#475569"/><text x="150" y="37" text-anchor="middle" fill="#cbd5e1" font-size="11">Image (Voiture)</text>
+    <line x1="190" y1="32" x2="220" y2="32" stroke="#64748b" stroke-width="1.5"/>
+    
+    <!-- Manual Feature Extraction -->
+    <rect x="220" y="10" width="160" height="45" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="300" y="28" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="600">Extraction manuelle</text>
+    <text x="300" y="43" text-anchor="middle" fill="#94a3b8" font-size="10">(Formes, bords, roues)</text>
+    <line x1="380" y1="32" x2="410" y2="32" stroke="#64748b" stroke-width="1.5"/>
+
+    <!-- Classification Model -->
+    <rect x="410" y="10" width="150" height="45" rx="6" fill="#1e293b" stroke="#38bdf8"/>
+    <text x="485" y="28" text-anchor="middle" fill="#f8fafc" font-size="11" font-weight="600">Algorithme (SVM, RF)</text>
+    <text x="485" y="43" text-anchor="middle" fill="#94a3b8" font-size="10">Classification</text>
+    <line x1="560" y1="32" x2="590" y2="32" stroke="#64748b" stroke-width="1.5"/>
+
+    <!-- Output -->
+    <rect x="590" y="10" width="100" height="45" rx="6" fill="#1e293b" stroke="#4ade80"/>
+    <text x="640" y="37" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="600">"Voiture"</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="40" y1="140" x2="810" y2="140" stroke="#334155" stroke-dasharray="4,4"/>
+
+  <!-- Bottom: Deep Learning -->
+  <g transform="translate(30, 165)">
+    <text x="0" y="40" fill="#a855f7" font-size="14" font-weight="600">Deep Learning</text>
+    
+    <!-- Input -->
+    <rect x="110" y="15" width="80" height="45" rx="6" fill="#1e293b" stroke="#475569"/><text x="150" y="42" text-anchor="middle" fill="#cbd5e1" font-size="11">Image (Voiture)</text>
+    <line x1="190" y1="37" x2="220" y2="37" stroke="#64748b" stroke-width="1.5"/>
+
+    <!-- End to End Neural Net -->
+    <rect x="220" y="15" width="340" height="45" rx="6" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+    <text x="390" y="33" text-anchor="middle" fill="#c084fc" font-size="12" font-weight="600">Réseau de neurones profond (CNN / Transformer)</text>
+    <text x="390" y="48" text-anchor="middle" fill="#94a3b8" font-size="10">Extraction de caractéristiques + Classification automatisées</text>
+    <line x1="560" y1="37" x2="590" y2="37" stroke="#64748b" stroke-width="1.5"/>
+
+    <!-- Output -->
+    <rect x="590" y="15" width="100" height="45" rx="6" fill="#1e293b" stroke="#4ade80"/>
+    <text x="640" y="42" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="600">"Voiture"</text>
+  </g>
+</svg>
