@@ -238,7 +238,7 @@ Dans ce problème, vous devez fusionner deux tableaux triés en un seul tableau 
 * Modifiez la valeur de `a` à `100` **uniquement** en utilisant le pointeur `p`.
 * Affichez à nouveau `a` pour vérifier la modification.
 
-## Q2.
+### Q2.
 **Échange de deux valeurs (Passage par pointeur)**
 
 **Objectif :** Écrire une fonction qui simule un passage par référence via des pointeurs.
@@ -247,7 +247,7 @@ Dans ce problème, vous devez fusionner deux tableaux triés en un seul tableau 
 * Dans le `main`, instanciez deux variables `x = 5` et `y = 10`.
 * Appelez la fonction `echange` et vérifiez que `x` vaut `10` et `y` vaut `5`.
 
-## Q3.
+### Q3.
 **Arithmétique de pointeurs élémentaire**
 
 **Objectif :** Parcourir un tableau statique sans utiliser les crochets `[]`.
@@ -256,7 +256,7 @@ Dans ce problème, vous devez fusionner deux tableaux triés en un seul tableau 
 * Déclarez un pointeur `ptr` pointant sur le premier élément du tableau.
 * À l'aide d'une boucle `for` et de l'arithmétique de pointeurs (`*(ptr + i)` ou `ptr++`), affichez tous les éléments du tableau ainsi que leur adresse mémoire.
 
-## Q4.
+### Q4.
 **Somme et Maximum d'un tableau**
 
 **Objectif :** Transmettre un tableau à une fonction via un pointeur.
@@ -265,7 +265,7 @@ Dans ce problème, vous devez fusionner deux tableaux triés en un seul tableau 
 * La fonction doit calculer la somme et le maximum des éléments du tableau et écrire directement les résultats dans les adresses fournies par `pSomme` et `pMax`.
 * Testez cette fonction dans le `main` avec un tableau d'entiers fixe.
 
-## Q5.
+### Q5.
 **Inversion de tableau sur place**
 
 **Objectif :** Manipuler deux pointeurs sur un même tableau.
@@ -274,7 +274,7 @@ Dans ce problème, vous devez fusionner deux tableaux triés en un seul tableau 
 * Utilisez deux pointeurs : l'un pointant au début du tableau (`debut`), l'autre pointant sur le dernier élément (`fin = debut + taille - 1`).
 * À l'aide d'une boucle `while (debut < fin)`, échangez les valeurs et faites avancer/reculer les deux pointeurs.
 
-## Q6.
+### Q6.
 **Longueur d'une chaîne de caractères C (`char*`)**
 
 **Objectif :** Manipuler les pointeurs avec des caractères (terminateur `\0`).
@@ -282,7 +282,7 @@ Dans ce problème, vous devez fusionner deux tableaux triés en un seul tableau 
 * Écrivez votre propre fonction `int maLongueur(const char* str)` (équivalent de `strlen`).
 * Ne stockez aucun indice entier : utilisez un pointeur courant qui s'incrémente jusqu'à rencontrer le caractère nul `'\0'`, puis calculez la différence d'adresses ou un compteur d'itérations.
 
-## Q7.
+### Q7.
 **Redimensionnement manuel d'un tableau**
 
 **Objectif :** Comprendre le fonctionnement interne d'un tableau dynamique lors d'un agrandissement.

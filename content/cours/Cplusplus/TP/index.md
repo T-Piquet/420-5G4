@@ -103,12 +103,13 @@ Vous devez ajouter 3 nouvelles fonctionnalités tirée du backlog du projet :
 - 1 fonctionnalité au choix dans *Interface et Expérience Utilisateur*
 - 1 fonctionnalité au choix dans *Gestion des Données*
 - La fonctionnalité journal d'activités.
+- Corriger le bug
 
 <!-- TODO: Mieux definir chaques features -->
 #### Interface et Expérience Utilisateur
 
 - numérotation automatique des ID utilisateurs. 
-- Validation robuste des entrées (ISBN format, nom utilisateur, etc.)
+- Afficher le nom d'utilisateur plutôt que l'id dans l'affichage des livres.
 - Détection des doublons plus intelligente (même titre, auteur, ISBN).
 
 #### Gestion des Données
@@ -124,6 +125,11 @@ Vous devez ajouter 3 nouvelles fonctionnalités tirée du backlog du projet :
 2026-10-23 01:35:23 - [AJOUT LIVRE] L'assomoir |Victor Hugo|9782253090275|1|
 ```
 
+#### Corriger un bug
+- Sauvegarde automatique à la sortie sans répertoire de données
+ - Si on lance sans --data-dir, saveLibraryData essaie d’écrire dans "" et échoue silencieusement.
+ - Proposition : ne pas sauvegarder si les chemins sont vides et afficher un message explicite.
+
 ### Veille technologique
 Donnez ces explications dans le fichier `README.md` à la racine du dépôt. C'est le texte qui est afficher sur la page de votre repos sur Github.
 
@@ -137,4 +143,4 @@ Donnez ces explications dans le fichier `README.md` à la racine du dépôt. C'e
 Expliquez en détails une fonctionnalité / notion dans le code que ne nous avons pas ou peu vu en cours. Montrez ici l'exemple sorti du code du projet.
 
 #### Question 2 : Options de développement possible
-Proposez une solution plus adaptée pour la gestion de bibliothèque et faisant appel éventuellement à une technologie autre que le C++, et expliquez comment vous interfaceriez ça avec le C++. Pensez au futur de cette bibliothèque à Alexandrie qui pourrait éventuellement contenir des millions de livres.
+Proposez une solution plus adaptée pour la gestion de bibliothèque et faisant appel éventuellement à une technologie autre que le C++, et expliquez comment vous interfaceriez ça avec le C++. Quelle solution technologique utiliseriez vous ? Pensez au futur de cette bibliothèque à Alexandrie qui pourrait éventuellement contenir des millions de livres.

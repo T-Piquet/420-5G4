@@ -202,11 +202,11 @@ class classeDerivee : mode_heritage classeBase{
 };
 ```
 
-| Mode                        | Description                                                                                                                                                                                                   |
+| Mode d'héritage                  | Description                                                                                                                                                                                                   |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Mode d'Héritage Public**  | Les membres publics de la classe de base deviendront publics dans la classe dérivée et les membres protégés de la classe de base deviendront protégés dans la classe dérivée.                                 |
-| **Mode d'Héritage Protégé** | Les membres publics et protégés de la classe de base deviendront tous protégés dans la classe dérivée.                                                                                                        |
-| **Mode d'Héritage Privé**   | Les membres publics et les membres protégés de la classe de base deviendront tous privés dans la classe dérivée. Le mode privé est le mode par défaut qui est appliqué lorsque nous ne spécifions aucun mode. |
+| **Public** (`public`) | Les membres publics de la classe de base deviendront publics dans la classe dérivée et les membres protégés de la classe de base deviendront protégés dans la classe dérivée.                                 |
+| **Protégé** (`protected`) | Les membres publics et protégés de la classe de base deviendront tous protégés dans la classe dérivée.                                                                                                        |
+| **Privé** (`private`)  | Les membres publics et les membres protégés de la classe de base deviendront tous privés dans la classe dérivée. Le mode privé est le mode par défaut qui est appliqué lorsque nous ne spécifions aucun mode. |
 
 > [!tip]
 >Pour rappel les membres privé de la classe de base ne sont pas accessible à la classe dérivée. Si vous souhaitez utiliser les variables privée de votre classe de base dans votre classe dérivée, vous devez avoir créé des accesseurs publique dans votre classe de base.
