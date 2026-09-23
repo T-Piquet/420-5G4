@@ -49,6 +49,34 @@ Le mode sombre peut être activé via les paramètres du profil.
 Cette modification inclut l'ajout de variables CSS pour les couleurs de fond et de texte.
 ```
 
+## Utilisation des forks dans github
+
+Nous allons travailler hors de classroom pour le projet, Microsoft l'à supprimé cette année. Ici, tout le monde contribuera sur le même dépôt, à la manière des projets open source.
+
+Vous allez faire un `fork` du dépôt d'origine, c'est a dire faire une copie sur votre compte git du dépot. Vous allez pouvoir travailler comme vous voulez sur votre dépot, une fois votre contribution terminée, vous allez faire une `pull-request` pour intégrer vos changement sur le dépôt principale.
+
+{{% expand title="**Détails de la procédure de fork avec GitHub**"%}}
+
+![alt text](forkGH.png)
+
+![alt text](fork2.png)
+
+Maintenant le dépôt du cours est copié sur votre compte github et garde un lien vers le dépôt de départ.
+
+Clonez votre repos : 
+![alt text](clone.png)
+
+Faites vos contributions, de manière habituelle (`add`, `commit`, `push`). 
+
+Une fois votre contribution terminée faite une `pull-request`.
+
+![alt text](pullrequest.png)
+
+Votre dernier commit devra contenir `[REMISE]`, et vous ferez ensuite une pull-request dans la branche principale du site `main`.
+
+{{% /expand %}}
+
+
 ## Utilisation générale de git
 
 Voici un ensemble de lien qui vous permettrons de résoudre les problèmes courant que vous pourrez rencontrer avec git.

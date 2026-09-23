@@ -134,31 +134,9 @@ Vous pouvez aussi monter une démonstration plus ambitieuse que votre atelier, m
 
 ## Utilisation du dépôt git
 
-Nous allons travailler hors de classroom pour le projet, tout le monde contribuera sur le même dépôt, à la manière des projets open source.
+Comme pour le TP C++ nous utiliser un fork pour travailler sur le porjet.
 
-Vous allez faire un `fork` du dépôt d'origine, c'est a dire faire une copie sur votre compte git du dépot. Vous allez pouvoir travailler comme vous voulez sur votre dépot, une fois votre contribution terminée, vous allez faire une `pull-request` pour intégrer vos changement sur le dépôt principale.
-
-{{% expand title="Utilisation de fork avec GitHub"%}}
-
-![alt text](forkGH.png)
-
-![alt text](fork2.png)
-
-Maintenant le dépôt du cours est copié sur votre compte github et garde un lien vers le dépôt de départ.
-
-Clonez votre repos : 
-![alt text](clone.png)
-
-Faites vos contributions, de manière habituelle (`add`, `commit`, `push`). 
-
-Une fois votre contribution terminée faite une `pull-request`.
-
-![alt text](pullrequest.png)
-
-Votre dernier commit devra contenir `[REMISE]`, et vous ferez ensuite une pull-request dans la branche principale du site `main`.
-
-{{% /expand %}}
-
+Référez vous à la [page git](../../base-de-connaissances/git/#utilisation-des-forks) pour plus de détails.
 
 > [!warning] Attention
 > Ne pas ajouter de **fichiers trop volumineux**. Si vous avez besoin de joindre une vidéo, des données d'entrainement, utilisez des liens vers l'extérieur : *youtube*, *onedrive* etc...
