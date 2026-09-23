@@ -5,7 +5,7 @@ draft: true
 ---
 
 
-# TP / Atelier Pratique : Développement d'une Interface GUI Python et Coding Assisté par IA
+## TP / Atelier Pratique : Développement d'une Interface GUI Python et Coding Assisté par IA
 
 **Environnement :** VS Codium + Extension Continue + Ollama (Gemma 4)
 
@@ -24,9 +24,9 @@ draft: true
 
 ## Contexte & Objectif
 
-Dans cet atelier, vous allez concevoir une **interface graphique (GUI) en Python avec customTkinter** permettant de remplacer l'interface en ligne de commande d'un programme du TP **C++**.
+Dans cet atelier, vous allez concevoir une **interface graphique (GUI) en Python avec customTkinter** permettant de remplacer l'interface en ligne de commande du programme du TP **C++**.
 
-L'objectif second de cet atelier est d'apprendre à **collaborer efficacement avec un assistant de code IA** (LLM local/cloud via Continue) tout en conservant la maîtrise de votre projet, en gérant le contexte/tokens de manière responsable, et en appliquant de rigoureuses méthodologies de planification.
+L'objectif second de cet atelier est d'apprendre à **collaborer efficacement avec un assistant de code IA** (LLM local/cloud via opencode) tout en conservant la maîtrise de votre projet, en gérant le contexte/tokens de manière responsable, et en appliquant de rigoureuses méthodologies de planification.
 
 ---
 
@@ -34,30 +34,25 @@ L'objectif second de cet atelier est d'apprendre à **collaborer efficacement av
 
 ### Outils requis
 
-* **Éditeur :** VS Codium avec l'extension **Continue** installée.
+* **Éditeur :** VScode, avec un devcontainer exécutant opencode. La configuration du devcontainer vous sera fourni.
 * **Moteur LLM (Ollama) :**
-* Modèle recommandé : **`gemma4:31bb-cloud`** (très performant et équilibré).
-* *Alternatives :* `gemma4 36B` (puissant, plus gourmand) ou `gemma4 26B` (rapide et léger).
-
-
-
+    * Modèle recommandé : **`deepseek v4.1-flash`** (très performant et équilibré, disponible sur le cloud seulement).
+    * *Alternatives :* `gemma4 36B` (puissant, plus gourmand) ou `gemma4 26B` (rapide et léger).
 
 ---
 
 ## Travail à Réaliser
 
-### Phase 1 : Planification et Conception (`/docs`)
+### Phase 1 : Planification et Conception
 
-Avant d'écrire la moindre ligne de code, vous devez documenter votre démarche dans un dossier `docs/` à la racine de votre dépôt Git :
+Avant de générer la moindre ligne de code, il faut planifier le travail (mode `plan` de opencode). Commencez par faire `/init` dans opencode pour créer un fichier agents.md qui résume l'état du projet. Ajoutez ce fichier à git, et n'oubliez pas de le mettre à chaque commit, il peut évoluer.
 
-1. **Choix technique d'intégration :** Rédigez une courte analyse expliquant comment votre interface Python va communiquer avec la logique C++ (ex: sous-processus `subprocess`, wrappers, API C/C++, fichiers intermédiaires, etc.).
-2. **Cahier des charges fonctionnel (`docs/fonctionnalites.md`) :** Listez l'ensemble des fonctionnalités que la GUI doit offrir par rapport au programme C++.
-3. **Maquettage / Mockups (`docs/mockups/`) :** Réalisez des schémas visuels de l'interface (captures, dessins ou wireframes) pour guider le développement de l'UI (de nombreux modèles sont multi-modaux).
 
 ---
 
 ### Phase 2 : Développement de l'Interface GUI
 
+* Interface python avec le code C++ avec `pybind11`
 * Coder l'interface customTkinter en Python en vous appuyant sur vos maquettes.
 * Avancer par **petites étapes testables** (découper le problème en sous-composants).
 * Valider le fonctionnement de l'interfaçage entre Python et la logique C++.
@@ -69,20 +64,16 @@ Avant d'écrire la moindre ligne de code, vous devez documenter votre démarche 
 > **Règle d'or :** L'IA est votre assitant, pas le developpeur principal. Ne déléguez pas 100 % du travail au LLM. Vous devez comprendre et être capable d'expliquer chaque ligne de code produite.
 
 * **Traçabilité des échanges :**
-* Exportez régulièrement vos sessions de chat Continue au format Markdown (`save chat as md`) et **commitez-les dans Git**.
-> Dans le mode plein ecran du chat de continue :
+* Exportez régulièrement vos sessions de chat Continue au format Markdown (`/export`) et **commitez-les dans Git**.
 
-![alt text](image.png)
+* **Gestion optimale des tokens & du contexte :** Pensez à utiliser la commande **/compact** ou à ouvrir une **nouvelle session** dès que vous changez de sujet ou de composant pour éviter de saturer la mémoire contextuelle, le fichiers agents.md vous permet de garder une trace de vos avancements.
 
-* **Gestion optimale des tokens & du contexte :** Pensez à utiliser la commande **Compact session** ou à ouvrir une **nouvelle session** dès que vous changez de sujet ou de composant pour éviter de saturer la mémoire contextuelle.
-
+* **Maintenir une continuité entre les session :**
+* Utiliser des fichiers `.md` pour suivre vos avancements, vous pouvez les faires générez et les réutiliser pour ne pas perdre de vue les taches les plus complexes. Ca aide aussi à réduire la taille du contexte.
 
 * **Stratégie multi-modèles :** N'hésitez pas à alterner entre différents niveaux de LLM (SOTA, Open Weight, modèles plus légers) selon la complexité de la tâche (refactoring, génération de fonctions simple, documentation).
 
-
 * **Versioning Git :** Effectuez des commits réguliers avec des messages clairs retraçant l'évolution du projet.
-
-
 
 ---
 
@@ -90,9 +81,9 @@ Avant d'écrire la moindre ligne de code, vous devez documenter votre démarche 
 
 Un dépôt Git contenant :
 
-* [ ] Le code source C++ original et le nouveau code Python (Tkinter).
-* [ ] Le dossier `docs/` avec la documentation d'architecture, le cahier des charges `.md` et les mockups visuels.
-* [ ] L'historique des échanges avec Continue (fichiers `.md` des chats). Dans un répertoire `chatsLogs`.
+* [ ] Le code source C++ original et le nouveau code Python (customtkinter), et fichier d'interface C++.
+* [ ] Le fichier agents.md versionné dans git.
+* [ ] L'historique des échanges avec opencode (fichiers `.md` des chats). Dans un répertoire `chatsLogs`.
 * [ ] Un historique de commits Git propre et régulier. 
 
 
