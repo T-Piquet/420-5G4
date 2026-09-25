@@ -80,6 +80,8 @@ int main() {
 }
 ```
 
+> La classe noeud est complète, l'implémentation des fonctions doit être faites hors de la classe.
+
 ### Sortie attendue :
 
 ```
@@ -157,18 +159,14 @@ Après ajout de 50: 10 -> 20 -> 30 -> 40 -> 50 -> NULL
 
 ### À faire :
 
-1. Créez une fonction `rechercher(Noeud* tete, int valeur)` qui :
-    - Retourne `true` si la valeur est trouvée
-    - Retourne `false` sinon
-2. Créez une fonction `obtenirPosition(Noeud* tete, int valeur)` qui :
+1. Créez une fonction `obtenirPosition(Noeud* tete, int valeur)` qui :
     - Retourne la position de l'élément (commence à 0)
     - Retourne -1 si l'élément n'est pas trouvé
-3. Testez avec une liste [10, 20, 30, 40, 50] en recherchant 30, 60, et 10
+2. Testez avec une liste [10, 20, 30, 40, 50] en recherchant 30, 60, et 10
     
 ### Prototypes :
 
 ```cpp
-bool rechercher(Noeud* tete, int valeur);
 int obtenirPosition(Noeud* tete, int valeur);
 ```
 
@@ -250,7 +248,22 @@ Liste vidée: (liste vide)
 
 ---
 
-## Étape 7 : Programme complet avec menu
+## Étape 7 : Classe listeChainee
+
+**Objectif :** Créez une classe liste chaînée qui contient les fonctions que vous avez développées précédemment. 
+
+### À faire :
+
+1. Créez la classe `listeChainee`.
+1. Créez un pointeur vers la tête de la liste chainée comme membre privé de la classe
+1. Adaptez les fonctions que vous avez développé précédement pour qu'elles deviennent membre de la classe `listecahinee`.
+
+Bonus:
+- implémentz la surcharge de l'opérateur `[]` pour accéder aux éléments de la liste.
+
+---
+
+## Étape 8 : Programme complet avec menu
 
 **Objectif :** Créer un programme interactif utilisant toutes les fonctions
 
