@@ -9,6 +9,7 @@ home = [ "HTML", "RSS", "SEARCH"]
 [params]
   themeVariant = ["zen-light", "zen-dark"]
   collapsibleMenu = true
+  alwaysopen = false
 
 # Hide the Home entry.
 # Default: false
