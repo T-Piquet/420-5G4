@@ -74,6 +74,8 @@ Une fois votre contribution terminée faite une `pull-request`.
 
 Votre dernier commit devra contenir `[REMISE]`, et vous ferez ensuite une pull-request dans la branche principale du site `main`.
 
+---
+
 {{% /expand %}}
 
 

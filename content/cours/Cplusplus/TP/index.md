@@ -1,7 +1,6 @@
 +++
 title = "TP C++"
 weight = 110
-draft = true
 
 [params]
   menuPre = '<i class="fa-solid fa-flask"></i> '
@@ -72,21 +71,25 @@ Ce travail compte pour **20%** de votre session et sera corrigé selon la grille
 
 ## Spécifications détaillées
 
-- Utilisez le dev container par défaut C++ de vscode. Comme vu [ici](../introduction/#un-premier-programme).
-- Ce projet utilise cmake, pensez à créer un répertoire `build`. Comme vu [ici](../fonctions/#cmake)
-- Le code est disponible sur git
+- Utilisez le dev container par défaut C++ de vscode. Comme vu [ici](../introduction/#un-premier-programme). *Pensez à le versionner dans git.*
+- Ce projet utilise cmake, pensez à créer un répertoire `build`. Comme vu [ici](../fonctions/#cmake). *Pensez à votre `.gitignore`.*
+- Le code est disponible sur git, vous allez faire un `fork` du projet. Référez vous à la [page git](../../base-de-connaissances/git/#utilisation-des-forks) pour plus de détails.
 
-<!-- #TODO mettre a jour le repo et les dates-->
-[<i class="fa-brands fa-github"></i> Repos Github](https://classroom.github.com/a/c3m8ThN0) classroom du projet
+<div style="text-align: center; font-size: 28px; font-weight: bold;">
+  <a href="https://github.com/T-Piquet/420-5G4-TPcpp"><i class="fa-brands fa-github"></i> Dépot Github du projet</a> 
+</div>
 
 > [!warning] **Remise**
 > **Soignez vos commit** en suivant les recommandations [**ici**](../../../base%20de%20connaissances/git/#bien-%C3%A9crire-un-message-de-commit). 
 >
 > Votre historique git est un indicateur de votre progression lors du TP, c'est une manière pour moi d'évaluer votre code. Trop peu de commit me feront soupsonner l'utilisation d'IA générative.
 >
-> Le **dernier commit** pour la remise doit être fais avant :
-> - **Groupe 1** : Remise le 28/10 23h59
-> - **Groupe 2** : Remise le 27/10 23h59
+> Le **dernier commit + pull request** doit être fais avant :
+> - **Groupe 1** : Remise le 9/10 23h59
+> - **Groupe 2** : Remise le 6/10 23h59
+> - **Groupe 3** : Remise le 7/10 23h59
+> 
+> En cas de doute, vous pouvez me demander de vérifier si j'ai bien recu votre `pull-request`.
 
 ### Combler les trous dans le code
 
@@ -105,7 +108,6 @@ Vous devez ajouter 3 nouvelles fonctionnalités tirée du backlog du projet :
 - La fonctionnalité journal d'activités.
 - Corriger le bug
 
-<!-- TODO: Mieux definir chaques features -->
 #### Interface et Expérience Utilisateur
 
 - numérotation automatique des ID utilisateurs. 
