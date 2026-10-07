@@ -26,7 +26,7 @@ $O(1)$ — c'est un tri sur place (in-place), il n'exige pas de mémoire supplé
 ## Consignes
 - Vous devez implémenter cet algorithme de tri en C++.
 - Vous pouvez utiliser un tableau donné (hardcoded) dans le code. 
-- Pensez à utiliser la STL pour le tableau et pour faire l'[échange](https://en.cppreference.com/cpp/algorithm/swap) des valeurs.
+- Pensez à utiliser la STL pour le tableau et pour faire l'[échange](https://en.cppreference.com/cpp/algorithm/swap) des valeurs (exemple simplifié de [swap](https://www.geeksforgeeks.org/cpp/swap-in-cpp/)).
 - Vous n'êtes pas obliger de créer une classe. Un seul fichier cpp suffit.
 
 ### Algorithme détail
@@ -51,3 +51,9 @@ $$\text{Si } A[j] < A[\text{min_idx}], \text{ alors } \text{min_idx} = j$$
 Une fois le parcours terminé, on échange $A[i]$ et $A[\text{min_idx}]$. La zone triée s'agrandit de 1 case.
 5. **Fin :**
 On répète jusqu'à ce qu'il ne reste qu'un seul élément au bout du tableau.
+
+<!-- ---
+## Solution
+
+[**tri.cpp**](tri.cpp)
+ -->

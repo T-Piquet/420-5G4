@@ -71,7 +71,7 @@ Ce travail compte pour **20%** de votre session et sera corrigé selon la grille
 
 ## Spécifications détaillées
 
-- Utilisez le dev container par défaut C++ de vscode. Comme vu [ici](../introduction/#un-premier-programme). *Pensez à le versionner dans git.*
+- Utilisez le dev container par défaut C++ de vscode. Comme vu [ici](../../base-de-connaissances/vscode/#dev-container-de-base). *Pensez à le versionner dans git.*
 - Ce projet utilise cmake, pensez à créer un répertoire `build`. Comme vu [ici](../fonctions/#cmake). *Pensez à votre `.gitignore`.*
 - Le code est disponible sur git, vous allez faire un `fork` du projet. Référez vous à la [page git](../../base-de-connaissances/git/#utilisation-des-forks) pour plus de détails.
 
@@ -85,9 +85,9 @@ Ce travail compte pour **20%** de votre session et sera corrigé selon la grille
 > Votre historique git est un indicateur de votre progression lors du TP, c'est une manière pour moi d'évaluer votre code. Trop peu de commit me feront soupsonner l'utilisation d'IA générative.
 >
 > Le **dernier commit + pull request** doit être fais avant :
-> - **Groupe 1** : Remise le 9/10 23h59
-> - **Groupe 2** : Remise le 6/10 23h59
-> - **Groupe 3** : Remise le 7/10 23h59
+> - **Groupe 1** : Remise le ~~9/10 23h59~~ 16/10 23h59
+> - **Groupe 2** : Remise le ~~6/10 23h59~~ 19/10 23h59
+> - **Groupe 3** : Remise le ~~7/10 23h59~~ 14/10 23h59
 > 
 > En cas de doute, vous pouvez me demander de vérifier si j'ai bien recu votre `pull-request`.
 
