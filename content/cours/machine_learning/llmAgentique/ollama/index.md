@@ -41,6 +41,9 @@ https://ollama.com/download
 
 Il est recommandé (mais pas obligatoire) de prendre un souscription pour 1 mois à ollama (28$). Vous aurez accès à des GPU pour l'execution de vos requètes, ainsi que certain modèle plus puissant ne pouvant pas tourner sur des machines locales. Le gain de temps n'est pas négligeable. Vous aurez largement assez de token pour menez à bien le projet.
 
+> [!tip]
+> Connectez vous à votre compte ollama en ligne en utilisant la commande `ollama signin` avant lancer opencode
+
 ## L'API ollama en python
 
 Ollama propose un server REST local pour envoyer ses requètes, il propose également une interface en python pour communiquer avec le server.
@@ -66,3 +69,8 @@ Je recommande en particulier [deepseek-v4.1-flash](https://ollama.com/library/de
 Pour lancer opencode, vous pouvez utiliser le raccourci fournis sur la page de ollama
 
 ![alt text](image-1.png)
+
+## Démo vidéo
+
+{{< video-player src="https://trucs.blob.core.windows.net/video/video_opencode.webm" type="video/webm" id="video-opencode" >}}
+
