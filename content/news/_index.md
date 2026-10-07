@@ -6,11 +6,22 @@ weight= 40
   menuPre = '<i class="fa-regular fa-newspaper"></i> '
 +++
 
+### Les models d'IA décisionnel
+
+![alt text](image-2.png?width=20vw&classes=left)
+
+> [!tip] liens
+> - https://jevmodel.org/
+> - Application des modèles de décision : [techcrunch.com](https://techcrunch.com/2026/10/06/how-ai-decision-models-could-change-content-moderation/)
+>
+> - Model pour ollama : [ollama](https://ollama.com/library/clef) - [clef](https://blog.cloudflare.com/clef-decision-models/)
+
+
 ### Recompilation de ROM (retro gaming)
 
 ![](image-1.png?width=20vw&classes=left)
 
-> [!tip] lien
+> [!tip] liens
 > - Article sur la scène de recomp (en) : https://retrolunch.com/blog/posts/2026-03-31-pc-recomps.html
 > - Article sur la scène de recomp (fr) : https://korben.info/zelda-64-recompiled-portage-natif-ray-tracing-4k.html
 > - projet github de rcompilation : https://github.com/Zelda64Recomp/Zelda64Recomp
@@ -21,7 +32,7 @@ weight= 40
 ### Une IA réfute une conjecture de vieille de 80 ans (05-2026)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AYPQIntoJeE?si=HpX_DrMRJ3dU63Pg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-> [!tip] lien
+> [!tip] liens
 > - Communiqué de [open ai](https://openai.com/index/model-disproves-discrete-geometry-conjecture/)
 >
 > - Avis de [Terrence Tao](https://the-decoder.com/terence-tao-says-gpt-5-2-pro-cracked-an-erdos-problem-but-warns-the-win-says-more-about-speed-than-difficulty/) (récipiendaire de la médaille Fields)
