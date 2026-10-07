@@ -6,6 +6,17 @@ weight= 40
   menuPre = '<i class="fa-regular fa-newspaper"></i> '
 +++
 
+### Recompilation de ROM (retro gaming)
+
+![](image-1.png?width=20vw&classes=left)
+
+> [!tip] lien
+> - Article sur la scène de recomp (en) : https://retrolunch.com/blog/posts/2026-03-31-pc-recomps.html
+> - Article sur la scène de recomp (fr) : https://korben.info/zelda-64-recompiled-portage-natif-ray-tracing-4k.html
+> - projet github de rcompilation : https://github.com/Zelda64Recomp/Zelda64Recomp
+> 
+> - outils de déssamblage / recompilation : https://www.radare.org/n/iaito.html
+
 ---
 ### Une IA réfute une conjecture de vieille de 80 ans (05-2026)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/AYPQIntoJeE?si=HpX_DrMRJ3dU63Pg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
